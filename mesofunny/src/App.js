@@ -21,7 +21,7 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
       
-      {/* <PrivateRoute 
+      <Route 
         path="/jokes"
         render={props => <Jokes {...props} 
           myJoke={myJoke}
@@ -29,16 +29,16 @@ function App() {
           update={update}
           isUpdating={isUpdating} />
       }
-      /> */}
+      />
       
-      {/* <PrivateRoute 
+      <Route 
         path="/jokes"
         render={props => <JokeList {...props} 
           myJoke={myJoke}
           setUpdate={setUpdate}
           setIsUpdating={setIsUpdating} />
       }
-      /> */}
+      />
 
       <Route path="/test" component={Test} />
       </Router>
