@@ -2,22 +2,24 @@
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    background: white; 
+    background: #00668E; 
 }
 
 .daily-joke-container {
+    height: 40vh; 
     width: 70%; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     text-align: center;
     margin: 20px auto;  
-    padding: 140px;
+    padding: 40px;
     background: rgb(216, 212, 212); 
 }
 
 .daily-joke {
-    font-size: 4vw; 
+    font-size: 3.5vh; 
+    line-height: 2; 
 }
 
 .home-grid {
@@ -25,11 +27,28 @@
     width: 70%; 
     margin: 20px auto; 
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
 }
 
 .home-icons {
     border: 3px solid rgb(216, 212, 212); 
     font-size: 8vw; 
     padding: 25px; 
+}
+
+.menus {
+    font-size: 5vw; 
+}
+
+.ui.labeled.icon.menu .item {
+    width: 33.33%; 
+    font-size: 3vw; 
+}
+
+.ui.input {
+    width: 100%; 
+    height: 50px; 
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
 }
