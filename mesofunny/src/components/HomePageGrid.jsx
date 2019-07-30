@@ -21,29 +21,29 @@ const HomePageGrid = () => {
 
                 <Menu.Item name='video camera'>
                     <Icon name='write square' />
-                    My Jokes 
+                    Public Feed 
                 </Menu.Item>
 
                 <Menu.Item name='video play'>
                     <Icon name='video play' />
-                    Videos
+                    Favorites
                 </Menu.Item>
             </Menu>
 
             <Menu icon='labeled' horizontal>
                 <Menu.Item name='gamepad'>
                     <Icon name='gamepad' />
-                    Games
+                    Friends 
                 </Menu.Item>
 
                 <Menu.Item name='video camera'>
                     <Icon name='video camera' />
-                    Channels
+                    Inbox
                 </Menu.Item>
 
                 <Menu.Item name='video play'>
                     <Icon name='video play' />
-                    Videos
+                    Profile
                 </Menu.Item>
             </Menu>
         </div>

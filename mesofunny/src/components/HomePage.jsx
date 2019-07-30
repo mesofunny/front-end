@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"; 
 import HomePageGrid from "./HomePageGrid";
 import '../homepage.css';
+import Footer from "./Footer";
 
 
 
@@ -45,6 +46,7 @@ const HomePage = () => {
             </div>
 
             <HomePageGrid />
+            <Footer />
       </div>
     );
   }
