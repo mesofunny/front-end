@@ -50,7 +50,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload,
                 isFetching: false,
-                jokes: []
+                
             }
         case ADD_DATA_START:
             return {
@@ -99,7 +99,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: '',
                 isFetching: true,
-                jokes: []
+                
             }
         case EDIT_DATA_SUCCESS:
             
@@ -114,7 +114,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload,
                 isFetching: false,
-                jokes: []
+                
             }
         case LOGIN_START:
             return {
@@ -137,7 +137,6 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload,
                 isLoggedIn: false,
-                jokes: [],
                 user: ''
             }
         case REGISTRATION_START:
@@ -160,7 +159,6 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload,
                 isLoggedIn: false,
-                jokes: []
             }
         default: 
             return state

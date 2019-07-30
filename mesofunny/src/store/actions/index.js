@@ -12,7 +12,7 @@ export const fetchData = () => dispatch => {
     axios
         .get(`https://mesofunny.herokuapp.com/api/v1/jokes`)
         .then(response => {
-            console.log(response)
+            console.log(response.data)
             dispatch({ type: FETCH_DATA_SUCCESS, payload: response.data.jokes})
         })
         .catch(err => console.log(err.response))
@@ -29,7 +29,7 @@ export const addData = (newJoke) => dispatch => {
         .post(`/api/v1/users/jokes`, newJoke)
         .then(response => {
             console.log(response)
-            dispatch({ type: ADD_DATA_SUCCESS, payload: response.data})
+            dispatch({ type: ADD_DATA_SUCCESS, payload: response.data.jokes})
         })
         .catch(err => console.log(err.response))
     }
@@ -45,7 +45,7 @@ export const deleteData = (id) => dispatch => {
         .delete(`/api/v1/users/jokes/${id}`, id)
         .then(response => {
             console.log(response)
-            dispatch({ type: ADD_DATA_SUCCESS, payload: response.data})
+            dispatch({ type: ADD_DATA_SUCCESS, payload: response.data.jokes})
         })
         .catch(err => console.log(err.response))
     }
