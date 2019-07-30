@@ -14,35 +14,35 @@ const HomePageGrid = () => {
 
             
             <Menu icon='labeled' horizontal>
-                <Menu.Item name='gamepad'>
+                <Menu.Item name='joke-book'>
                     <Icon name='book' />
                     JokeBook
                 </Menu.Item>
 
-                <Menu.Item name='video camera'>
-                    <Icon name='write square' />
+                <Menu.Item name='public feed'>
+                    <Icon name='id card' />
                     Public Feed 
                 </Menu.Item>
 
-                <Menu.Item name='video play'>
-                    <Icon name='video play' />
+                <Menu.Item name='favorites'>
+                    <Icon name='star' />
                     Favorites
                 </Menu.Item>
             </Menu>
 
             <Menu icon='labeled' horizontal>
-                <Menu.Item name='gamepad'>
-                    <Icon name='gamepad' />
+                <Menu.Item name='friends'>
+                    <Icon name='users' />
                     Friends 
                 </Menu.Item>
 
-                <Menu.Item name='video camera'>
-                    <Icon name='video camera' />
+                <Menu.Item name='inbox'>
+                    <Icon name='inbox' />
                     Inbox
                 </Menu.Item>
 
-                <Menu.Item name='video play'>
-                    <Icon name='video play' />
+                <Menu.Item name='user-outline'>
+                    <Icon name='user outline' />
                     Profile
                 </Menu.Item>
             </Menu>
