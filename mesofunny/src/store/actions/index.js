@@ -9,8 +9,8 @@ export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE'
 
 export const fetchData = () => dispatch => {
     dispatch({ type: FETCH_DATA_START})
-    axios
-        .get(`https://mesofunny.herokuapp.com/api/v1/jokes`)
+    axiosWithAuth()
+        .get(`/api/v1/users/jokes`)
         .then(response => {
             console.log(response.data)
             dispatch({ type: FETCH_DATA_SUCCESS, payload: response.data.jokes})

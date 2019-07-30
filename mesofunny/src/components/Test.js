@@ -10,6 +10,8 @@ const Test = (props) => {
             status: ''
         }
     })
+
+    const [state, setState] = useState([props.jokes])
     
     const logout = () => {
         localStorage.removeItem('token')
@@ -18,7 +20,7 @@ const Test = (props) => {
 
     useEffect(() => {
         props.fetchData()
-    }, [])
+    }, [state])
 
     const addJoke = (e) => {
         e.preventDefault()
@@ -44,13 +46,14 @@ const Test = (props) => {
     return ( 
         <div>
             <p>test me</p>
-            {props.jokes.map(joke => {
-                return <div>
+            {props.jokes ? props.jokes.map((joke,i) => {
+                return <div key={i}>
                     <p>{joke.title}</p>
                     <p>{joke.joke}</p>
+                    {console.log(joke.id)}
                     <button onClick={() => props.deleteData(joke.id)}>Delete</button>
                 </div>
-            })}
+            }) : <p>Loading...</p>}
             <form>
                 <input
                     type="text"
