@@ -2,38 +2,50 @@
 
 // imports 
 import React from 'react';
-import { Grid } from "semantic-ui-react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { Icon, Input, Menu } from "semantic-ui-react";
 
 const HomePageGrid = () => {
     return (
         <div className="home-grid">
-            <Grid columns={3}>
-                <Grid.Row>
-                    <Grid.Column>
-                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
-                    </Grid.Column>
-                </Grid.Row>
 
-                <Grid.Row>
-                    <Grid.Column>
-                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+            <Menu.Item>
+                <Input icon='search' placeholder='Search joke...' />
+            </Menu.Item>
+
+            
+            <Menu icon='labeled' horizontal>
+                <Menu.Item name='gamepad'>
+                    <Icon name='book' />
+                    JokeBook
+                </Menu.Item>
+
+                <Menu.Item name='video camera'>
+                    <Icon name='write square' />
+                    My Jokes 
+                </Menu.Item>
+
+                <Menu.Item name='video play'>
+                    <Icon name='video play' />
+                    Videos
+                </Menu.Item>
+            </Menu>
+
+            <Menu icon='labeled' horizontal>
+                <Menu.Item name='gamepad'>
+                    <Icon name='gamepad' />
+                    Games
+                </Menu.Item>
+
+                <Menu.Item name='video camera'>
+                    <Icon name='video camera' />
+                    Channels
+                </Menu.Item>
+
+                <Menu.Item name='video play'>
+                    <Icon name='video play' />
+                    Videos
+                </Menu.Item>
+            </Menu>
         </div>
     );   
 };
