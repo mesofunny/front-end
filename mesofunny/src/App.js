@@ -7,8 +7,6 @@ import JokeList from "./components/JokeList.js";
 import Profile from './components/Profile'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Jokes from "./components/Jokes";
-import JokeList from "./components/JokeList";
 import LoginRegister from './components/LoginRegister'
 import NavBar from './components/NavBar'
 import HomePage from './components/HomePage'
