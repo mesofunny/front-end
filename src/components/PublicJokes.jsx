@@ -31,7 +31,9 @@ function PublicJokes () {
     return (
         <div className="public-joke-feed">
             {Array.from(publicJokesArray).map((jokeObject) => {
-                return <PublicJokeCard props={jokeObject}/>
+               return (
+                   jokeObject.id % 2 === 0 ? <PublicJokeCard props={jokeObject} color={"blue-public-card"}/> : <PublicJokeCard props={jokeObject} color={"blue-public-white"}/>
+                   )
             })}
             <Footer/>
         </div>
