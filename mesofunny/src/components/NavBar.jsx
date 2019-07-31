@@ -7,7 +7,7 @@ const NavBar = () => {
 
     return ( 
         <div>
-            <Link exact to="/">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/contact">Contact Us</Link>
             <Link to="./components/Profile">Profile</Link>
         </div>
@@ -15,7 +15,7 @@ const NavBar = () => {
 } else {
     return (
         <div>
-            <Link exact to="/">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/user">Join Up</Link>
             <Link to="/contact">Contact Us</Link>
         </div>
