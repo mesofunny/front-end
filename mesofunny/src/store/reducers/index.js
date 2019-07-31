@@ -102,12 +102,12 @@ export const reducer = (state = initialState, action) => {
                 
             }
         case EDIT_DATA_SUCCESS:
-            
+            const newJokeData = state.jokes.filter(joke => joke.id !== action.payload.id)
             return {
                 ...state,
                 error: '',
                 isFetching: false,
-                jokes: action.payload
+                jokes: [...newJokeData, action.payload]
             }
         case EDIT_DATA_FAILURE:
             return {

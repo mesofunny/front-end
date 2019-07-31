@@ -11,7 +11,7 @@ const Test = (props) => {
         }
     })
 
-    const [state, setState] = useState([props.jokes])
+    // const [state, setState] = useState([props.jokes])
     
     const logout = () => {
         localStorage.removeItem('token')
@@ -20,7 +20,7 @@ const Test = (props) => {
 
     useEffect(() => {
         props.fetchData()
-    }, [state])
+    }, [])
 
     const addJoke = (e) => {
         e.preventDefault()

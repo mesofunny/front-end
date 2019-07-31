@@ -15,7 +15,10 @@ export const fetchData = () => dispatch => {
             console.log(response.data)
             dispatch({ type: FETCH_DATA_SUCCESS, payload: response.data.jokes})
         })
-        .catch(err => console.log(err.response))
+        .catch(err => {
+            console.log(err.response)
+            dispatch({ type: LOGIN_FAILURE, payload: err})}
+            )
     }
 
 export const ADD_DATA_START = 'ADD_DATA_START'
@@ -31,7 +34,10 @@ export const addData = (newJoke) => dispatch => {
             console.log(response)
             dispatch({ type: ADD_DATA_SUCCESS, payload: response.data.jokes})
         })
-        .catch(err => console.log(err.response))
+        .catch(err => {
+            console.log(err.response)
+            dispatch({ type: LOGIN_FAILURE, payload: err})
+        })
     }
 
 export const DELETE_DATA_START = 'DELETE_DATA_START'
@@ -40,14 +46,17 @@ export const DELETE_DATA_FAILURE = 'DELETE_DATA_FAILURE'
 
 
 export const deleteData = (id) => dispatch => {
-    dispatch({ type: ADD_DATA_START})
+    dispatch({ type: DELETE_DATA_START})
     axiosWithAuth()
-        .delete(`/api/v1/users/jokes/${id}`, id)
+        .delete(`/api/v1/users/jokes/${id}`)
         .then(response => {
             console.log(response)
-            dispatch({ type: ADD_DATA_SUCCESS, payload: response.data.jokes})
+            dispatch({ type: DELETE_DATA_SUCCESS, payload: response.data.joke})
         })
-        .catch(err => console.log(err.response))
+        .catch(err => {
+            console.log(err)
+            dispatch({ type: LOGIN_FAILURE, payload: err})
+        })
     }
 
 export const EDIT_DATA_START = 'EDIT_DATA_START'
@@ -61,9 +70,11 @@ export const editData = (id, editJoke) => dispatch => {
         .put(`/api/v1/users/jokes/${id}`, editJoke)
         .then(response => {
             console.log(response)
-            dispatch({ type: EDIT_DATA_SUCCESS, payload: response.data})
+            dispatch({ type: EDIT_DATA_SUCCESS, payload: response.data.jokes})
         })
-        .catch(err => console.log(err.response))
+        .catch(err => {
+            console.log(err.response)
+            dispatch({ type: LOGIN_FAILURE, payload: err})})
     }
 
 export const LOGIN_START = 'LOGIN_START'
