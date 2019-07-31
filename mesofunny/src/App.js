@@ -19,7 +19,7 @@ import Test from './components/Test';
 function App() {
   const [myJoke, setJokeList] = useState([]);
   const [update, setUpdate] = useState({});
-  const [isUpdating, setIsUpdating] = useState(false); 
+  const [isUpdating, setIsUpdating] = useState(false);
 
   return (
 
@@ -70,9 +70,28 @@ function App() {
         <Route path="/test" component={Test} />
 
 
-    </div>
-  )
 
+  
+
+      <Route 
+        path="/jokes"
+        render={props => <JokeList {...props} 
+          myJoke={myJoke}
+          setUpdate={setUpdate}
+          setIsUpdating={setIsUpdating} />
+      }
+      />
+           {/* <Route 
+        path="/jokes"
+        render={props => <Jokes {...props} 
+          myJoke={myJoke}
+          setJokeList={setJokeList}
+          update={update}
+          isUpdating={isUpdating} />
+      }
+      /> */}
+     </div>
+  ) 
 }
 
 export default App;
