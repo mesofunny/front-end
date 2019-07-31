@@ -2,6 +2,7 @@
 
 // imports 
 import React from 'react';
+<<<<<<< HEAD
 import { Grid, Image, Input, Menu } from "semantic-ui-react";
 
 import book from "./images/joke-book.png"; 
@@ -10,6 +11,10 @@ import favorites from "./images/favorites.png";
 import friends from "./images/friends.png"; 
 import profile from "./images/profile.png"; 
 // import inbox from "./images/inbox.png"; 
+=======
+import { Icon, Input, Menu } from "semantic-ui-react";
+import { Link } from 'react-router-dom'
+>>>>>>> beeaa9fc5d96de3480faff387d5c841310388042
 
 const HomePageGrid = () => {
     return (
@@ -19,6 +24,7 @@ const HomePageGrid = () => {
                 <Input icon='search' placeholder='Search joke...' />
             </Menu.Item>
 
+<<<<<<< HEAD
             <Grid className="home-grid">
                 <Grid.Column>
                     <Image src={book} className="home-grid-img"/>
@@ -45,6 +51,54 @@ const HomePageGrid = () => {
                 </Grid.Column>
             </Grid>
 
+=======
+            
+            <Menu icon='labeled' horizontal>
+                <Menu.Item name='joke-book'>
+                    <Icon name='book' />
+                    JokeBook
+                </Menu.Item>
+
+                <Menu.Item name='public feed'>
+                    <Icon name='id card' />
+                    Public Feed 
+                </Menu.Item>
+{/* 
+               <Menu.Item name='favorites'>
+                  <Icon name='star' />
+                    Favorites
+                <Link to="/jokes">
+                <Menu.Item name='video camera'>
+                    <Icon name='write square' />
+                    My Jokes 
+                </Menu.Item>
+                </Link>
+                
+                <Menu.Item name='video play'>
+                    <Icon name='video play' />
+                    Videos
+                  
+                </Menu.Item>
+*/}
+            </Menu>
+
+            <Menu icon='labeled' horizontal>
+                <Menu.Item name='friends'>
+                    <Icon name='users' />
+                    Friends 
+                </Menu.Item>
+
+                <Menu.Item name='inbox'>
+                    <Icon name='inbox' />
+                    Inbox
+                </Menu.Item>
+
+                <Menu.Item name='user-outline'>
+                    <Icon name='user outline' />
+                    Profile
+                </Menu.Item>
+            </Menu>
+>>>>>>> beeaa9fc5d96de3480faff387d5c841310388042
         </div>
     );   
 };
