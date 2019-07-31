@@ -43,16 +43,7 @@ function App() {
           setIsUpdating={setIsUpdating} />
       }
       />
-           {/* <Route 
-        path="/jokes"
-        render={props => <Jokes {...props} 
-          myJoke={myJoke}
-          setJokeList={setJokeList}
-          update={update}
-          isUpdating={isUpdating} />
-      }
-      /> */}
-     
+    
       </Router>
     </>
       </div>
