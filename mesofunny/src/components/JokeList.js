@@ -6,9 +6,13 @@ import {jokeTemplate} from './StyledWidgets'
 
 export default function JokeList(props) {
   return (
+
+<>
+<h2 style={JokeListHeading}>My Joke</h2>
+
     <div style={jokeContainer} >
-      <h2 style={JokeListHeading}>My Joke</h2>
-     <ul style={jokeTemplate}> 
+      {/* <h2 style={JokeListHeading}>My Joke</h2> */}
+     <div style={jokeTemplate}> 
         {props.myJoke.map(joke => (
           <JokeCard 
           joke={joke}
@@ -16,7 +20,8 @@ export default function JokeList(props) {
           setIsUpdating={props.setIsUpdating}
           />
       ))}
-      </ul>
+      </div>
     </div>
+   </>
   );
 }

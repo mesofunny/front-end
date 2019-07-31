@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {button} from "./StyledWidgets"
 
 //Id Generator
 let idGenerator = () => {
@@ -45,22 +46,22 @@ export default function Jokes(props) {
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
-        <input
+      <form className="joke-form" onSubmit={submitHandler}>
+        <input 
           type="text"
           placeholder="Title"
           name="name"
           value={jokeState.name}
           onChange={changeHandler}
         />
-        <input
+        <input 
           type="text"
           placeholder="ENTER JOKE HERE"
           name="description"
           value={jokeState.description}
           onChange={changeHandler}
         />
-        <button>
+        <button style={button}>
           {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
         </button>
 

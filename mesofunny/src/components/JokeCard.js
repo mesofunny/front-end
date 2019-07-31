@@ -10,7 +10,7 @@ export default function JokeCard(props) {
   };
 
   return (
-    <li style={jokeCardStyle}>
+    <div style={jokeCardStyle}>
       <p>
         <strong>Title: {props.joke.name}</strong>
       </p>
@@ -18,6 +18,6 @@ export default function JokeCard(props) {
         <strong>Description: </strong> {props.joke.description}
       </p>
       <button onClick={clicker}>Update</button>
-    </li>
+    </div>
   );
 }

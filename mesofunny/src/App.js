@@ -24,7 +24,7 @@ function App() {
       <Route path="/" component={NavBar}/>
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
-      
+        
       <Route 
         path="/jokes"
         render={props => <Jokes {...props} 
@@ -34,7 +34,7 @@ function App() {
           isUpdating={isUpdating} />
       }
       />
-      
+
       <Route 
         path="/jokes"
         render={props => <JokeList {...props} 
@@ -43,6 +43,15 @@ function App() {
           setIsUpdating={setIsUpdating} />
       }
       />
+           {/* <Route 
+        path="/jokes"
+        render={props => <Jokes {...props} 
+          myJoke={myJoke}
+          setJokeList={setJokeList}
+          update={update}
+          isUpdating={isUpdating} />
+      }
+      /> */}
       <Route path="/test" component={Test} />
       </Router>
     </>
