@@ -3,6 +3,7 @@
 // imports 
 import React from 'react';
 import { Icon, Input, Menu } from "semantic-ui-react";
+import { Link } from 'react-router-dom'
 
 const HomePageGrid = () => {
     return (
@@ -19,11 +20,13 @@ const HomePageGrid = () => {
                     JokeBook
                 </Menu.Item>
 
+                <Link to="/jokes">
                 <Menu.Item name='video camera'>
                     <Icon name='write square' />
                     My Jokes 
                 </Menu.Item>
-
+                </Link>
+                
                 <Menu.Item name='video play'>
                     <Icon name='video play' />
                     Videos

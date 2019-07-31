@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to MeSoFunny 👋</h1>
 <p>
   <a href="https://twitter.com/Shelby_NDiamond">
-    <img alt="Twitter: Shelby_NDiamond" src="https://img.shields.io/twitter/follow/Shelby_NDiamond.svg?style=social" target="_blank" />
+    <img alt="Twitter: ShelbyN_Diamond" src="https://img.shields.io/twitter/follow/ShelbyN_Diamond.svg?style=social" target="_blank" />
   </a>
 </p>
 
@@ -43,7 +43,7 @@ Our application incorporates some great technologies such as the following liste
 
 :princess: **Shelby Diamond**
 
-- Twitter: [@Shelby_NDiamond](https://twitter.com/Shelby_NDiamond)
+- Twitter: [@ShelbyN_Diamond](https://twitter.com/Shelby_NDiamond)
 - Github: [@ShelbyDiamond](https://github.com/ShelbyDiamond)
 
 ## Show your support
