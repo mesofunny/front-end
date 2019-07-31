@@ -8,3 +8,13 @@ export const jokeCardStyle = {
     padding: '4px',
     border: '1px solid black'
 }
+export const menuIcon = {
+    width: '120px',
+    height: 'auto', 
+    filter: 'invert(1)'
+    
+}
+export const menuBarEmoji = {
+    width: '100px',
+    height: 'auto'
+}
