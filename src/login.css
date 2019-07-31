@@ -1,0 +1,63 @@
+/* body {
+  background: #00668E;
+}
+*/
+
+.Container {
+  font-family: sans-serif;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  /* height: 500px; */
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  background: white;
+}
+
+.Login {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.Container form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.Container form input {
+  margin: 10px;
+  border-radius: 5px;
+  height: 25px;
+  background: rgb(236, 224, 152);
+  outline: none;
+}
+
+.Container a {
+  text-decoration: none;
+  color: rgb(133, 119, 119);
+  margin-top: 10px;
+}
+
+.Container button {
+  background: rgb(165, 19, 165);
+  border-radius: 5px;
+  color: white;
+  height: 30px;
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
