@@ -12,7 +12,7 @@ export default function JokeCard(props) {
   return (
     <div style={jokeCardStyle}>
       <p>
-        <strong>Title </strong> {props.joke.name}
+        <strong>Title {props.joke.name}</strong>
       </p>
       <p>
         <strong>Description: </strong> {props.joke.description}
