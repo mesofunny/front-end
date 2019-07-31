@@ -24,10 +24,10 @@ const HomePageGrid = () => {
                     <Icon name='id card' />
                     Public Feed 
                 </Menu.Item>
-{/* 
-               <Menu.Item name='favorites'>
+ 
+               {/* <Menu.Item name='favorites'>
                   <Icon name='star' />
-                    Favorites
+                    Favorites */}
                 <Link to="/jokes">
                 <Menu.Item name='video camera'>
                     <Icon name='write square' />
@@ -35,12 +35,12 @@ const HomePageGrid = () => {
                 </Menu.Item>
                 </Link>
                 
-                <Menu.Item name='video play'>
+                {/* <Menu.Item name='video play'>
                     <Icon name='video play' />
                     Videos
                   
-                </Menu.Item>
-*/}
+                </Menu.Item> */}
+
             </Menu>
 
             <Menu icon='labeled' horizontal>
