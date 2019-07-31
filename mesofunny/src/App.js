@@ -1,7 +1,7 @@
 import React  from "react";
 import { Route } from 'react-router-dom';
 import "./App.css";
-import  MenuBar from './components/MenuBar.js'
+import MenuBar from './components/MenuBar.js'
 import Profile from './components/Profile'
 import PublicFeed from './components/PublicFeed'
 import Favorites from './components/Favorites'
@@ -33,10 +33,6 @@ function App() {
       <Route  path='/inbox' component={Inbox} />
       <Route  path='/new-jokes' component={NewJokes} />
 
-
-
-        
-        
 
         {/* <Route path="/test" component={Test} /> */}
      </div>
