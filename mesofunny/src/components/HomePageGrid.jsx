@@ -3,6 +3,7 @@
 // imports 
 import React from 'react';
 import { Icon, Input, Menu } from "semantic-ui-react";
+import { Link } from 'react-router-dom'
 
 const HomePageGrid = () => {
     return (
@@ -24,12 +25,24 @@ const HomePageGrid = () => {
                     Public Feed 
                 </Menu.Item>
 
-                <Menu.Item name='favorites'>
-                    <Icon name='star' />
+              /*  <Menu.Item name='favorites'>
+                  <Icon name='star' />
                     Favorites
+                <Link to="/jokes">
+                <Menu.Item name='video camera'>
+                    <Icon name='write square' />
+                    My Jokes 
+                </Menu.Item>
+                </Link>
+                
+                <Menu.Item name='video play'>
+                    <Icon name='video play' />
+                    Videos
+                  
                 </Menu.Item>
             </Menu>
 
+              */
             <Menu icon='labeled' horizontal>
                 <Menu.Item name='friends'>
                     <Icon name='users' />
