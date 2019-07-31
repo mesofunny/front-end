@@ -64,7 +64,6 @@ export default function Jokes(props) {
         <button style={button}>
           {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
         </button>
-
       </form>
     </div>
   );
