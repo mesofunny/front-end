@@ -52,7 +52,8 @@ function App() {
           isUpdating={isUpdating} />
       }
       /> */}
-      <Route path="/test" component={Test} />
+
+      <PrivateRoute path="/test" component={Test} />
       </Router>
     </>
       </div>
