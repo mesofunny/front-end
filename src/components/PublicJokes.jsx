@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"; 
 import Footer from "./Footer";
 import PublicJokeCard from "./PublicJokeCard";
+import HomePage from "./HomePage";
 
 function PublicJokes () {
 
@@ -30,12 +31,13 @@ function PublicJokes () {
 
     return (
         <div className="public-joke-feed">
+            <HomePage />
             {Array.from(publicJokesArray).map((jokeObject) => {
                return (
                    jokeObject.id % 2 === 0 ? <PublicJokeCard props={jokeObject} color={"blue-public-card"}/> : <PublicJokeCard props={jokeObject} color={"blue-public-white"}/>
                    )
             })}
-            <Footer/>
+            <Footer />
         </div>
     );
 
