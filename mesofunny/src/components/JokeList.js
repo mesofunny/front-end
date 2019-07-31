@@ -5,13 +5,12 @@ import {JokeListHeading} from './StyledWidgets';
 import {jokeTemplate} from './StyledWidgets'
 
 export default function JokeList(props) {
-  return (
+ return (
 
 <>
 <h2 style={JokeListHeading}>My Joke</h2>
 
     <div style={jokeContainer} >
-      {/* <h2 style={JokeListHeading}>My Joke</h2> */}
      <div style={jokeTemplate}> 
         {props.myJoke.map(joke => (
           <JokeCard 
