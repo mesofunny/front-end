@@ -52,12 +52,7 @@ function App() {
           isUpdating={isUpdating} />
       }
       /> */}
-<<<<<<< HEAD
-      {/* <Route path="/test" component={Test} /> */}
-=======
-
-      <PrivateRoute path="/test" component={Test} />
->>>>>>> e94f57bce0b89bc3948e8541107cdc989fd7128d
+      {/* <PrivateRoute path="/test" component={Test} /> */}
       </Router>
     </>
       </div>
