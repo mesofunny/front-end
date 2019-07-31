@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
-import { fetchData, addData, deleteData } from '../store/actions'
+import { fetchData, addData, deleteData, editData } from '../store/actions'
 
 const Test = (props) => {
     const [input, setInput] = useState({
@@ -52,6 +52,7 @@ const Test = (props) => {
                     <p>{joke.joke}</p>
                     {console.log(joke.id)}
                     <button onClick={() => props.deleteData(joke.id)}>Delete</button>
+                    <button>Edit</button>
                 </div>
             }) : <p>Loading...</p>}
             <form>
@@ -97,5 +98,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchData, addData, deleteData }
+    { fetchData, addData, deleteData, editData }
 )(Test)

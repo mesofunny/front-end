@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import JokeList from './JokeList'
 
 //Id Generator
 let idGenerator = () => {
@@ -43,6 +44,7 @@ export default function Jokes(props) {
 
   return (
     <div>
+      <JokeList />
       <form onSubmit={submitHandler}>
         <input
           type="text"

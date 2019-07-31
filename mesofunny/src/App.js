@@ -21,17 +21,20 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
       
-      {/* <PrivateRoute 
+      {/* <Route 
         path="/jokes"
         render={props => <Jokes {...props} 
           myJoke={myJoke}
           setJokeList={setJokeList}
           update={update}
-          isUpdating={isUpdating} />
+          isUpdating={isUpdating} 
+          setIsUpdating={setIsUpdating}
+          setUpdate={setUpdate}
+          />
       }
-      /> */}
+      />
       
-      {/* <PrivateRoute 
+      <Route 
         path="/jokes"
         render={props => <JokeList {...props} 
           myJoke={myJoke}
