@@ -25,19 +25,6 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
       
-      {/* <Route 
-        path="/jokes"
-        render={props => <Jokes {...props} 
-          myJoke={myJoke}
-          setJokeList={setJokeList}
-          update={update}
-          isUpdating={isUpdating} 
-          setIsUpdating={setIsUpdating}
-          setUpdate={setUpdate}
-          />
-      }
-      /> */}
-      
       <Route 
         path="/jokes"
         render={props => <JokeList {...props} 
