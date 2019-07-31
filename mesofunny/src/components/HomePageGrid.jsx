@@ -2,50 +2,49 @@
 
 // imports 
 import React from 'react';
-import { Icon, Input, Menu } from "semantic-ui-react";
+import { Grid, Image, Input, Menu } from "semantic-ui-react";
+
+import book from "./images/joke-book.png"; 
+import feed from "./images/public-feed.png"; 
+import favorites from "./images/favorites.png"; 
+import friends from "./images/friends.png"; 
+import profile from "./images/profile.png"; 
+// import inbox from "./images/inbox.png"; 
 
 const HomePageGrid = () => {
     return (
-        <div className="home-grid">
+        <div className="home-grid-container">
 
             <Menu.Item>
                 <Input icon='search' placeholder='Search joke...' />
             </Menu.Item>
 
-            
-            <Menu icon='labeled' horizontal>
-                <Menu.Item name='joke-book'>
-                    <Icon name='book' />
-                    JokeBook
-                </Menu.Item>
+            <Grid className="home-grid">
+                <Grid.Column>
+                    <Image src={book} className="home-grid-img"/>
+                </Grid.Column>
 
-                <Menu.Item name='public feed'>
-                    <Icon name='id card' />
-                    Public Feed 
-                </Menu.Item>
+                <Grid.Column>
+                    <Image src={feed} className="home-grid-img"/>
+                </Grid.Column>
 
-                <Menu.Item name='favorites'>
-                    <Icon name='star' />
-                    Favorites
-                </Menu.Item>
-            </Menu>
+                <Grid.Column>
+                    <Image src={favorites} className="home-grid-img"/>
+                </Grid.Column>
 
-            <Menu icon='labeled' horizontal>
-                <Menu.Item name='friends'>
-                    <Icon name='users' />
-                    Friends 
-                </Menu.Item>
+                <Grid.Column>
+                    <Image src={friends} className="home-grid-img"/>   
+                </Grid.Column>
 
-                <Menu.Item name='inbox'>
-                    <Icon name='inbox' />
-                    Inbox
-                </Menu.Item>
+                {/* <Grid.Column className="inbox">
+                    <Image src={inbox} />
+                </Grid.Column> */}
 
-                <Menu.Item name='user-outline'>
-                    <Icon name='user outline' />
-                    Profile
-                </Menu.Item>
-            </Menu>
+                <Grid.Column>
+                    <Image src={profile} className="home-grid-img"/>
+                </Grid.Column>
+            </Grid>
+
         </div>
     );   
 };
