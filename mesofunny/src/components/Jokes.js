@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {button} from "./StyledWidgets"
+import {button} from "./StyledWidgets";
 
 //Id Generator
 let idGenerator = () => {
@@ -66,14 +66,6 @@ export default function Jokes(props) {
         </button>
 
       </form>
-      <Route 
-        path="/jokes"
-        render={props => <JokeList {...props} 
-          myJoke={myJoke}
-          setUpdate={setUpdate}
-          setIsUpdating={setIsUpdating} />
-      }
-      />
     </div>
   );
 }

@@ -19,3 +19,22 @@ export const menuBarEmoji = {
     width: '100px',
     height: 'auto'
 }
+export const JokeListHeading = {
+    display: 'flex',
+    background: 'white',
+    padding: '10px auto',
+    border: '1px solid black',
+    width: '80%',
+    justifyContent: 'center',
+    borderRadius: '5px'
+}
+export const button = {
+    borderRadius: "10px",
+}
+export const jokeTemplate = {
+    display: 'flex',
+    background: 'white',
+    width: "30%",
+    padding: "15px",
+    margin: "25px",
+}
