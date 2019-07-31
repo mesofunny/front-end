@@ -52,7 +52,7 @@ function App() {
           isUpdating={isUpdating} />
       }
       /> */}
-      <Route path="/test" component={Test} />
+      {/* <Route path="/test" component={Test} /> */}
       </Router>
     </>
       </div>
