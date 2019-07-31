@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux'
 import { fetchData, addData, deleteData, editData } from '../store/actions'
 
+
+
 function Jokes (props) {
   const [jokeState, setJokeState] = useState({
     title: "",
@@ -45,7 +47,7 @@ function Jokes (props) {
   // };
 
 
-
+    console.log()
   return (
     <div>
       <form  >

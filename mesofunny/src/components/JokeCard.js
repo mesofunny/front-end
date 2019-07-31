@@ -1,13 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { jokeCardStyle } from './StyledWidgets.js'
+import { connect } from 'react-redux'
+import { fetchData, addData, deleteData, editData } from '../store/actions'
+
+import { Modal, Form, Button } from 'semantic-ui-react'
 
 
-export default function JokeCard(props) {
-  console.log(props.setIsUpdating);
-  const clicker = () => {
-    props.setUpdate(props.joke);
-    props.setIsUpdating(true);
+function JokeCard (props) {
+ const [jokeState, setJokeState] = useState({
+    title: "",
+    joke: "",
+    status: ''
+  });
+
+  const changeHandler = event => {
+    setJokeState({
+      ...jokeState,
+      [event.target.name]: event.target.value
+    });
   };
+
+  const editJoke = e => {
+    e.preventDefault()
+    props.editData(props.joke.id, jokeState)
+    setJokeState({
+      title: '',
+      joke: '',
+      status: ''
+    })
+  }
+
+  console.log(props.jokes.id)
 
   return (
     <div style={jokeCardStyle}>
@@ -17,7 +40,52 @@ export default function JokeCard(props) {
       <p>
         <strong>Description: </strong> {props.joke.joke}
       </p>
-      <button onClick={clicker}>Update</button>
+      <Modal trigger={<button>Edit</button>}>
+          <form  >
+        <input 
+          type="text"
+          placeholder="Title"
+          name="title"
+          value={jokeState.title}
+          onChange={changeHandler}
+        />
+        <input 
+          type="text"
+          placeholder="ENTER JOKE HERE"
+          name="joke"
+          value={jokeState.joke}
+          onChange={changeHandler}
+        />
+        <input 
+          type="text"
+          placeholder="public or private"
+          name="status"
+          value={jokeState.status}
+          onChange={changeHandler}
+        />
+        <button onClick={editJoke}>
+          Update Joke
+        </button>
+
+      </form>
+        
+      </Modal>
+      
     </div>
   );
 }
+
+const mapStateToProps = state => {
+    console.log(state)
+    return {
+        error: state.error,
+        isFetching: state.isFetching,
+        jokes: state.jokes,
+        user: state.user
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    { fetchData, addData, deleteData, editData }
+)(JokeCard)

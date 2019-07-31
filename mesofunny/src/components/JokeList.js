@@ -8,9 +8,6 @@ import { connect } from 'react-redux'
 import { fetchData, addData, deleteData, editData } from '../store/actions'
 
 function JokeList (props) {
-  const [myJoke, setJokeList] = useState([]);
-  const [update, setUpdate] = useState({});
-  const [isUpdating, setIsUpdating] = useState(false);
 
   useEffect(() => {
         props.fetchData()
@@ -23,15 +20,14 @@ function JokeList (props) {
 <h2 style={JokeListHeading}>My Joke</h2>
 
     <div style={jokeContainer} >
-      {/* <h2 style={JokeListHeading}>My Joke</h2> */}
      <div style={jokeTemplate}> 
         {props.jokes.map(joke => (
+          <div>
           <JokeCard 
           joke={joke}
-          setUpdate={setUpdate}
-          setIsUpdating={setIsUpdating}
-          myJoke={myJoke}
           />
+          <button onClick={() => props.deleteData(joke.id)}>Delete</button>
+          </div>
       ))}
       </div>
     </div>
