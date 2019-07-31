@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Jokes from "./components/Jokes";
-import JokeList from "./components/JokeList";
+import JokeList from "./components/JokeList.js";
 import LoginRegister from './components/LoginRegister'
 import NavBar from './components/NavBar'
 import HomePage from './components/HomePage'
@@ -36,7 +36,7 @@ function App() {
           setUpdate={setUpdate}
           />
       }
-      />
+      /> */}
       
       <Route 
         path="/jokes"
@@ -46,7 +46,7 @@ function App() {
           setIsUpdating={setIsUpdating} />
       }
       />
-           {/* <Route 
+        <Route 
         path="/jokes"
         render={props => <Jokes {...props} 
           myJoke={myJoke}
@@ -54,8 +54,8 @@ function App() {
           update={update}
           isUpdating={isUpdating} />
       }
-      /> */}
-      {/* <PrivateRoute path="/test" component={Test} /> */}
+      /> 
+      <PrivateRoute path="/test" component={Test} />
       </Router>
     </>
       </div>

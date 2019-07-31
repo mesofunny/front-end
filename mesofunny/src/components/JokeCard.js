@@ -12,10 +12,10 @@ export default function JokeCard(props) {
   return (
     <div style={jokeCardStyle}>
       <p>
-        <strong>Title: {props.joke.name}</strong>
+        <strong>Title: {props.joke.title}</strong>
       </p>
       <p>
-        <strong>Description: </strong> {props.joke.description}
+        <strong>Description: </strong> {props.joke.joke}
       </p>
       <button onClick={clicker}>Update</button>
     </div>
