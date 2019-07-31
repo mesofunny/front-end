@@ -24,8 +24,7 @@ function App() {
       <Route path="/" component={NavBar}/>
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
-      <Route path="/profile" component={Profile}/>
-      
+        
       <Route 
         path="/jokes"
         render={props => <Jokes {...props} 
@@ -53,7 +52,7 @@ function App() {
           isUpdating={isUpdating} />
       }
       /> */}
-      {/* <PrivateRoute path="/test" component={Test} /> */}
+     
       </Router>
     </>
       </div>

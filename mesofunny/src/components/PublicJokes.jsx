@@ -5,23 +5,40 @@ import Footer from "./Footer";
 function PublicJokes () {
 
     const [getPublicJoke, setPublicJoke] = useState("")
+    const [getPublicTitle, setPublicTitle] = useState("")
 
 useEffect(() => {
-    const getFeed = () => {
+    const getFeed= () => {
         axios 
             .get("https://mesofunny.herokuapp.com/api/v1/jokes")
 
             .then(response => {
+                setPublicTitle(response.data.jokes.title)
                 setPublicJoke(response.data.jokes.joke)
             })
-            
+
             .catch(error => {
             console.log("Where are my jokes?", error)
-            })
+            });
     }
-    PublicJokes(), []
-)
-}
+
+    getFeed();
+    
+    },[]);
+
+    return (
+        <div className="public-joke-feed">
+            <h2>
+                {getPublicTitle}
+            </h2>
+            
+            <h2>
+            {getPublicJoke}
+            </h2>
+            <Footer/>
+        </div>
+    );
+
 }
 
-export default PublicJokes()
+export default PublicJokes

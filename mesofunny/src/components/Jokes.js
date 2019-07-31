@@ -66,6 +66,14 @@ export default function Jokes(props) {
         </button>
 
       </form>
+      <Route 
+        path="/jokes"
+        render={props => <JokeList {...props} 
+          myJoke={myJoke}
+          setUpdate={setUpdate}
+          setIsUpdating={setIsUpdating} />
+      }
+      />
     </div>
   );
 }
