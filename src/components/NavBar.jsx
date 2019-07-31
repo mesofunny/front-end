@@ -9,7 +9,7 @@ const NavBar = () => {
         <div>
             <Link to="/">Home</Link>
             <Link to="/contact">Contact Us</Link>
-            <Link to="./components/Profile">Profile</Link>
+            <Link to="/profile">Profile</Link>
         </div>
      );
 } else {
