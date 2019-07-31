@@ -1,4 +1,6 @@
 import React from "react";
+import { jokeCardStyle } from './StyledWidgets.js'
+
 
 export default function JokeCard(props) {
   console.log(props.setIsUpdating);
@@ -8,9 +10,9 @@ export default function JokeCard(props) {
   };
 
   return (
-    <div>
+    <div style={jokeCardStyle}>
       <p>
-        <strong>Title </strong> {props.joke.name}
+        <strong>Title: {props.joke.name}</strong>
       </p>
       <p>
         <strong>Description: </strong> {props.joke.description}

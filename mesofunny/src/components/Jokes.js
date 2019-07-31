@@ -42,27 +42,29 @@ export default function Jokes(props) {
     setJokeState({ name: "", description: "" });
   };
 
+
+
   return (
     <div>
-      <JokeList />
-      <form onSubmit={submitHandler}>
-        <input
+      <form className="joke-form" onSubmit={submitHandler}>
+        <input 
           type="text"
           placeholder="Title"
           name="name"
           value={jokeState.name}
           onChange={changeHandler}
         />
-        <input
+        <input 
           type="text"
           placeholder="ENTER JOKE HERE"
           name="description"
           value={jokeState.description}
           onChange={changeHandler}
         />
-        <button>
+        <button >
           {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
         </button>
+
       </form>
     </div>
   );

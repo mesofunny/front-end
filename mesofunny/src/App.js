@@ -8,6 +8,9 @@ import NavBar from './components/NavBar'
 import HomePage from './components/HomePage'
 import PrivateRoute from './components/PrivateRoute'
 import Test from './components/Test'
+import {testingBackground} from './components/StyledWidgets'
+
+
 
 function App() {
   const [myJoke, setJokeList] = useState([]);
@@ -15,6 +18,7 @@ function App() {
   const [isUpdating, setIsUpdating] = useState(false);
 
   return (
+      <div style={testingBackground}>
     <>
       <Router>
       <Route path="/" component={NavBar}/>
@@ -41,11 +45,21 @@ function App() {
           setUpdate={setUpdate}
           setIsUpdating={setIsUpdating} />
       }
+      />
+           {/* <Route 
+        path="/jokes"
+        render={props => <Jokes {...props} 
+          myJoke={myJoke}
+          setJokeList={setJokeList}
+          update={update}
+          isUpdating={isUpdating} />
+      }
       /> */}
 
       <PrivateRoute path="/test" component={Test} />
       </Router>
     </>
+      </div>
   );
 }
 
