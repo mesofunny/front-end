@@ -10,14 +10,14 @@ export default function JokeCard(props) {
   };
 
   return (
-    <div style={jokeCardStyle}>
+    <li style={jokeCardStyle}>
       <p>
-        <strong>Title {props.joke.name}</strong>
+        <strong>Title: {props.joke.name}</strong>
       </p>
       <p>
         <strong>Description: </strong> {props.joke.description}
       </p>
       <button onClick={clicker}>Update</button>
-    </div>
+    </li>
   );
 }
