@@ -8,7 +8,13 @@ import NavBar from './components/NavBar'
 import HomePage from './components/HomePage'
 import PrivateRoute from './components/PrivateRoute'
 import Test from './components/Test'
-import {testingBackground} from './components/StyledWidgets'
+import MenuBar from './components/MenuBar.js'
+import Profile from './components/Profile'
+import PublicFeed from './components/PublicFeed'
+import Favorites from './components/Favorites'
+import Friends from './components/Friends'
+import Inbox from './components/Inbox'
+import NewJokes from './components/NewJokes'
 
 
 
@@ -18,12 +24,24 @@ function App() {
   const [isUpdating, setIsUpdating] = useState(false);
 
   return (
-      <div style={testingBackground}>
+      <div >
     <>
-      <Router>
+    <Router>
+
+    <MenuBar />
+
+      <Route exact path ='/' component={HomePage} />
       <Route path="/" component={NavBar}/>
-      <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
+      <Route  path='/profile' component={Profile} />
+      <Route  path='/public-feed' component={PublicFeed} />
+      <Route  path='/favorites' component={Favorites} />
+      <Route  path='/friends' component={Friends} />
+      <Route  path='/inbox' component={Inbox} />
+      <Route  path='/new-jokes' component={NewJokes} />
+
+
+
       
       <Route 
         path="/jokes"
