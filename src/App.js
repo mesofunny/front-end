@@ -12,8 +12,7 @@ import { DataContext } from './contexts/DataContext'
 import axios from 'axios'
 
 
-
-function App() {
+function App(props) {
   const [data, setData] = useState([])
   const [filteredData, setFilteredData] = useState([])
 
@@ -51,7 +50,11 @@ const searchJokesHandler = e => {
         <>
         <DataContext.Provider value={{searchJokesHandler, data, filteredData}}>
         <Router>
+<<<<<<< HEAD
             <MenuBar />
+=======
+            <Route path="/" component={MenuBar} />
+>>>>>>> 717e1123fb168eb0dd60fb7c900306366d67e28d
             <Route exact path ='/' component={HomePage} />
             <Route path="/user" component={LoginRegister} />
             <Route path='/profile' component={Profile} />

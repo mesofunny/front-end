@@ -12,11 +12,10 @@ export const jokeContainer = {
 export const menuIcon = {
     width: '120px',
     height: 'auto', 
-    filter: 'invert(1)'
     
 }
 export const menuBarEmoji = {
-    width: '100px',
+    width: '20%',
     height: 'auto'
 }
 export const JokeListHeading = {
@@ -37,5 +36,11 @@ export const button = {
 
 export const testingBackground = {
     background: "rgb(86, 177, 173)",
+}
+
+
+export const JokeCarder ={
+    display: 'flex',
+    flexDirection: 'column'
 }
 

@@ -78,6 +78,7 @@ const LoginRegister = (props) => {
             placeholder="password"
             onChange={handleChanges}
           />
+          {props.error ? <p>Password must be 7 characters</p> : null}
           <button onClick={userLogin}>Login</button>
         </form>
       </div>
@@ -126,6 +127,7 @@ const LoginRegister = (props) => {
             placeholder="password"
             onChange={handleChanges}
           />
+          {props.error ? <p>Password must be 7 characters</p> : null}
           <button onClick={userRegister}>Register</button>
         </form>
       </div>

@@ -33,7 +33,7 @@ function JokeCard (props) {
   console.log(props.jokes.id)
 
   return (
-    <Table definition>
+    <Table definition className="Table">
       <Table.Body>
         <Table.Row>
           <Table.Cell width={3}>{props.joke.title}</Table.Cell>
