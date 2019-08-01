@@ -9,6 +9,7 @@ import HomePage from './components/HomePage'
 import PrivateRoute from './components/PrivateRoute'
 import Test from './components/Test'
 import {testingBackground} from './components/StyledWidgets'
+import PublicJokes from './components/PublicJokes'
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="/" component={NavBar}/>
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
+      <Route path="/public" component={PublicJokes} />
       
       <Route 
         path="/jokes"
