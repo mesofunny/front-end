@@ -10,6 +10,10 @@ import Profile from "./components/Profile";
 import Jokes from "./components/Jokes";
 import { DataContext } from './contexts/DataContext'
 import axios from 'axios'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68d781be46e66cb1dc745c27188dd35371530c64
 
 
 function App() {
