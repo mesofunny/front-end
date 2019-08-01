@@ -14,6 +14,7 @@ import profile from "./images/profile.png";
 // import inbox from "./images/inbox.png"; 
 
 const HomePageGrid = (props) => {
+    const token = localStorage.getItem('token')
     return (
         <div className="home-grid-container">
 
@@ -25,7 +26,7 @@ const HomePageGrid = (props) => {
 
                 
                 <Grid.Column>
-                    <Link to="/jokes"><Image src={book} className="home-grid-img"/></Link>
+                    {!token ? <Link to="/user"><Image src={book} className="home-grid-img"/></Link> : <Link to="/jokes"><Image src={book} className="home-grid-img"/></Link>}
                 </Grid.Column>
              
 

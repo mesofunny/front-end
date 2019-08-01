@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { userLogin, register } from '../store/actions'
 import { withRouter } from 'react-router-dom'
 import '../login.css'
+import menubaremoji from '../ImgFiles/emoji.png';
 
 const LoginRegister = (props) => {
   const [input, setInput] = useState({
@@ -46,7 +47,7 @@ const LoginRegister = (props) => {
 
   if (!login) {
     return (
-      <div>
+      <div className="outer-container">
        
       <div className="Container" >
         
@@ -58,8 +59,9 @@ const LoginRegister = (props) => {
             Register
           </a>
         </div>
-        <h1>Dad Jokes</h1>
-        <img src="https://www.sccpre.cat/mypng/detail/39-391459_joy-android-crying-laughing-emoji.png" />
+        <h1>WELCOME!</h1>
+        <img src={menubaremoji} alt='menuBarEmoji' />
+        
         <form>
           <input
             type="email"
@@ -68,6 +70,7 @@ const LoginRegister = (props) => {
             placeholder="email"
             onChange={handleChanges}
           />
+          
           <input
             type="password"
             name="password"
@@ -82,6 +85,7 @@ const LoginRegister = (props) => {
     );
   } else {
     return (
+      <div className="outer-container">
       <div className="Container">
         <div className="Login">
           <a href="#" onClick={toggle}>
@@ -91,8 +95,8 @@ const LoginRegister = (props) => {
             Register
           </a>
         </div>
-        <h1>Dad Jokes</h1>
-        <img src="https://www.sccpre.cat/mypng/detail/39-391459_joy-android-crying-laughing-emoji.png" />
+        <h1>WELCOME!</h1>
+        <img src={menubaremoji} alt='menuBarEmoji' />
         <form>
           <input
             type="text"
@@ -124,6 +128,7 @@ const LoginRegister = (props) => {
           />
           <button onClick={userRegister}>Register</button>
         </form>
+      </div>
       </div>
     );
   }
