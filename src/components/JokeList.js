@@ -1,8 +1,8 @@
 import React, { useState, useEffect}  from "react";
 import JokeCard from "./JokeCard";
 import { jokeContainer } from './StyledWidgets.js';
-import {JokeListHeading} from './StyledWidgets';
 import {jokeTemplate} from './StyledWidgets'
+import Jokes from './Jokes'
 
 import { connect } from 'react-redux'
 import { fetchData, addData, deleteData, editData } from '../store/actions'
@@ -17,8 +17,6 @@ function JokeList (props) {
 
   return (
 <>
-<h2 style={JokeListHeading}>My Joke</h2>
-
     <div style={jokeContainer} >
      <div style={jokeTemplate}> 
         {props.jokes.map(joke => (

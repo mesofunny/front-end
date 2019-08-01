@@ -19,9 +19,6 @@ import NewJokes from './components/NewJokes'
 
 
 function App() {
-  const [myJoke, setJokeList] = useState([]);
-  const [update, setUpdate] = useState({});
-  const [isUpdating, setIsUpdating] = useState(false);
 
   return (
       <div >
@@ -43,23 +40,6 @@ function App() {
 
 
       
-      <Route 
-        path="/jokes"
-        render={props => <JokeList {...props} 
-          myJoke={myJoke}
-          setUpdate={setUpdate}
-          setIsUpdating={setIsUpdating} />
-      }
-      />
-        <Route 
-        path="/jokes"
-        render={props => <Jokes {...props} 
-          myJoke={myJoke}
-          setJokeList={setJokeList}
-          update={update}
-          isUpdating={isUpdating} />
-      }
-      /> 
       <PrivateRoute path="/test" component={Test} />
       </Router>
     </>

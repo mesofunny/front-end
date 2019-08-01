@@ -41,7 +41,7 @@ import { menuBarEmoji } from './StyledWidgets';
                     </Dropdown.Menu>
             </Dropdown>
             <Menu.Menu position='left'>
-                <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
+                <img src={menuBarEmoji} alt='menuBarEmoji' style={menuBarEmoji}/>
                 <h1>MeSoFunny</h1>
             </Menu.Menu>
             <Menu.Menu position='right'>

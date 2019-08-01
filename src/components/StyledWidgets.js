@@ -2,7 +2,7 @@ export const jokeContainer = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    background: '#00668E',
+    background: '#00ABA6',
 }
 export const jokeCardStyle = {
     margin: '5px',
@@ -21,12 +21,14 @@ export const menuBarEmoji = {
 }
 export const JokeListHeading = {
     display: 'flex',
-    background: 'white',
-    padding: '10px auto',
-    border: '1px solid black',
-    width: '80%',
+    background: '#007672',
+    padding: '25px auto',
+    width: '75%',
     justifyContent: 'center',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    color: 'white',
+    margin: '0px',
+    marginLeft: '11%'
 }
 export const button = {
     borderRadius: "10px",
@@ -38,3 +40,8 @@ export const jokeTemplate = {
     padding: "15px",
     margin: "25px",
 }
+
+export const testingBackground = {
+    background: '#00ABA6'
+}
+
