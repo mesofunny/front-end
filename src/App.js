@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
+import axios from "axios"; 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import LoginRegister from './components/LoginRegister'
 import HomePage from './components/HomePage'
@@ -7,6 +8,7 @@ import MenuBar from './components/MenuBar.js'
 import { testingBackground } from './components/StyledWidgets'
 import PublicJokes from "./components/PublicJokes";
 import Profile from "./components/Profile"; 
+import { DataContext } from './contexts/DataContext'; 
 import Jokes from "./components/Jokes";
 
 
@@ -49,7 +51,7 @@ const searchJokesHandler = e => {
         <>
         <DataContext.Provider value={{searchJokesHandler, data, filteredData}}>
         <Router>
-          <MenuBar />
+            <MenuBar />
             <Route exact path ='/' component={HomePage} />
             <Route path="/user" component={LoginRegister} />
             <Route path='/profile' component={Profile} />

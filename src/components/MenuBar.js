@@ -4,9 +4,15 @@ import { Dropdown, Menu } from 'semantic-ui-react';
 import menubaremoji from '../ImgFiles/menubaremoji.PNG';
 import { menuBarEmoji } from './StyledWidgets';
 
- const MenuBar = () => {
+
+ const MenuBar = (props) => {
     const token = localStorage.getItem('token')
-    
+
+     const logout = () => {
+        localStorage.removeItem('token')
+        props.history.push('/')
+    }
+    console.log('props', props)
     if (token) {
         return (
             <div>
@@ -27,6 +33,9 @@ import { menuBarEmoji } from './StyledWidgets';
                             <Link to ='/profile'>
                                 <Dropdown.Item>Profile</Dropdown.Item>
                             </Link>
+                            </div>
+                            <div>
+                                <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
                             </div>
                         </Dropdown.Menu>
                     </Dropdown>
