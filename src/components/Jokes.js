@@ -6,9 +6,13 @@ import TopHalfPage from "./TopHalfPage";
 import Footer from "./Footer";
 import styled from "styled-components";
 import {JokeListHeading} from './StyledWidgets';
+import AddJokeCircle from "./images/add-img-circle.png"
 
-const Title = styled.h4 `
-    padding: 15px 15px 0px 15px;
+
+const Title = styled.h1 `
+    padding: 96px 15px 0px 15px;
+    margin: 0px;
+    font-size: 1.8rem;
 `
 const BigTitleDiv = styled.div `
   display: inline-flex;
@@ -33,6 +37,14 @@ const AddDaveJokeBookButton = styled.button`
   display: flex;
   justify-content: center;
 `
+const JokeCircle = styled.img`
+  height: auto;
+`
+
+
+
+
+
 function Jokes (props) {
   const [jokeState, setJokeState] = useState({
     title: "",
@@ -61,10 +73,11 @@ function Jokes (props) {
 
     <div>
     <TopHalfPage/>
-    <h2 style={JokeListHeading}>Dave's Joke Book</h2>
+    <h2 style={JokeListHeading}>My Joke Book</h2>
     <BigTitleDiv>
       <Title>Title</Title>
       <Title>Preview</Title>
+      <JokeCircle src={AddJokeCircle}/>
       <Title>Actions</Title>
       <Title>Public</Title>
       </BigTitleDiv>

@@ -28,7 +28,8 @@ export const JokeListHeading = {
     borderRadius: '5px',
     color: 'white',
     margin: '0px',
-    marginLeft: '11%'
+    marginLeft: '11%',
+    fontSize: '2vw',
 }
 export const button = {
     borderRadius: "10px",
