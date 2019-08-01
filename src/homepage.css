@@ -2,8 +2,11 @@
 
 
 /* BEGINNING of HomePageGrid.jsx CSS 
+
 .home-container contains .daily-joke-container 
+
 .daily-joke-container contains .dad-quote-img and .daily-joke 
+
 */
 
 .home-container {
@@ -42,7 +45,9 @@
 
 
 /* BEGINNING of HomePageGrid.jsx CSS 
+
 .home-grid-container contains .home-grid (container for icons that link to pages)
+
 .home-grid contains 
     -.ui.input (search bar)
     -.ui.grid>.column:not(.row), .ui.grid>.row>.column (icons/images container)
@@ -87,7 +92,9 @@
 
 
 /* BEGINNING of PublicJokes.jsx CSS 
+
 .public-joke-feed (container that holds the joke cards)
+
 */
 
 .public-joke-feed {
@@ -99,8 +106,11 @@
 
 
 /* BEGINNING of PublicJokeCard.jsx CSS 
+
 .public-card (a single joke card)
+
 .ui.segment (all joke card text)
+
 */
 
 .public-card {

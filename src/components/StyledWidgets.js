@@ -30,7 +30,7 @@ export const jokeTemplate = {
 }
 
 export const testingBackground = {
-    background: '#00ABA6'
+    background: "rgb(86, 177, 173)",
 }
 
 export const button = {
