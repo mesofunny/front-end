@@ -25,7 +25,7 @@ const HomePageGrid = (props) => {
 
                 
                 <Grid.Column>
-                    <Link to="/user"><Image src={book} className="home-grid-img"/></Link>
+                    <Link to="/jokes"><Image src={book} className="home-grid-img"/></Link>
                 </Grid.Column>
              
 
