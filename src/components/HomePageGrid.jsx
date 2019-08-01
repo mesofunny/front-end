@@ -25,12 +25,12 @@ const HomePageGrid = () => {
 
                 
                 <Grid.Column>
-                    <Link to="/jokes"><Image src={book} className="home-grid-img"/></Link>
+                    <Link to="/user"><Image src={book} className="home-grid-img"/></Link>
                 </Grid.Column>
              
 
                 <Grid.Column>
-                    <Link to="/public"><Image src={feed} className="home-grid-img"/></Link>
+                    <Link to="/public-feed"><Image src={feed} className="home-grid-img"/></Link>
                 </Grid.Column>
 
                 <Grid.Column>
@@ -46,7 +46,7 @@ const HomePageGrid = () => {
                 </Grid.Column> */}
 
                 <Grid.Column>
-                    <Link to="/"><Image src={profile} className="home-grid-img"/></Link>
+                    <Link to="/profile"><Image src={profile} className="home-grid-img"/></Link>
                 </Grid.Column>
             </Grid>
 
