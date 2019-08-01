@@ -4,11 +4,11 @@ export const jokeContainer = {
     justifyContent: 'center',
     background: '#00ABA6',
 }
-export const jokeCardStyle = {
-    margin: '5px',
-    padding: '4px',
-    border: '1px solid black'
-}
+// export const jokeCardStyle = {
+//     margin: '5px',
+//     padding: '4px',
+//     border: '1px solid black'
+// }
 export const menuIcon = {
     width: '120px',
     height: 'auto', 
@@ -27,17 +27,11 @@ export const JokeListHeading = {
     borderRadius: '5px',
     color: 'white',
     margin: '0px',
-    marginLeft: '11%'
+    marginLeft: '11%',
+    fontSize: '2vw',
 }
 export const button = {
     borderRadius: "10px",
-}
-export const jokeTemplate = {
-    display: 'flex',
-    background: 'white',
-    width: "30%",
-    padding: "15px",
-    margin: "25px",
 }
 
 export const testingBackground = {

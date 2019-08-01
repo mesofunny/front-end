@@ -1,7 +1,6 @@
 import React, { useState, useEffect}  from "react";
 import JokeCard from "./JokeCard";
 import { jokeContainer } from './StyledWidgets.js';
-import {jokeTemplate} from './StyledWidgets'
 import Jokes from './Jokes'
 
 import { connect } from 'react-redux'
@@ -18,7 +17,7 @@ function JokeList (props) {
   return (
 <>
     <div style={jokeContainer} >
-     <div style={jokeTemplate}> 
+     <div> 
         {props.jokes.map(joke => (
           <div>
           <JokeCard 

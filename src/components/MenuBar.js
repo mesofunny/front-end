@@ -5,10 +5,19 @@ import menubaremoji from '../ImgFiles/menubaremoji.PNG';
 import { menuBarEmoji } from './StyledWidgets';
 
 
+<<<<<<< HEAD
 
  const MenuBar = () => {
+=======
+ const MenuBar = (props) => {
+>>>>>>> 96223ca2f51851a27cb9f4444b16f39daa0c4fb2
     const token = localStorage.getItem('token')
-    
+
+     const logout = () => {
+        localStorage.removeItem('token')
+        props.history.push('/')
+    }
+    console.log('props', props)
     if (token) {
         return (
             <div >
@@ -29,6 +38,9 @@ import { menuBarEmoji } from './StyledWidgets';
                             <Link to ='/profile'>
                                 <Dropdown.Item>Profile</Dropdown.Item>
                             </Link>
+                            </div>
+                            <div>
+                                <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
                             </div>
                         </Dropdown.Menu>
                     </Dropdown>
@@ -57,6 +69,11 @@ import { menuBarEmoji } from './StyledWidgets';
                             <div>
                             <Link to='/' >
                                 <Dropdown.Item>Home</Dropdown.Item>
+                            </Link>
+                            </div>
+                            <div>
+                            <Link to ='/user'>
+                                <Dropdown.Item>Login</Dropdown.Item>
                             </Link>
                             </div>
                             <div>

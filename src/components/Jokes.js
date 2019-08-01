@@ -6,9 +6,13 @@ import TopHalfPage from "./TopHalfPage";
 import Footer from "./Footer";
 import styled from "styled-components";
 import {JokeListHeading} from './StyledWidgets';
+import AddJokeCircle from "./images/add-img-circle.png"
 
-const Title = styled.h4 `
-    padding: 15px 15px 0px 15px;
+
+const Title = styled.h1 `
+    padding: 96px 15px 0px 15px;
+    margin: 0px;
+    font-size: 1.8rem;
 `
 const BigTitleDiv = styled.div `
   display: inline-flex;
@@ -23,20 +27,30 @@ const Form = styled.form`
   display: flex;
   justify-content: center;
 `
+const Input = styled.input`
+  height: 30px;
+  width: 200px;
+  
+  `
+
 const AddDaveJokeBookButton = styled.button`
   display: flex;
   justify-content: center;
 `
+const JokeCircle = styled.img`
+  height: auto;
+`
+
+
+
+
+
 function Jokes (props) {
   const [jokeState, setJokeState] = useState({
     title: "",
     joke: "",
-    status: ''
+    status1: 'yes'
   });
-
-  // useEffect(() => {
-  //   setJokeState(props.update);
-  // }, [props.update]);
 
   const changeHandler = event => {
     setJokeState({
@@ -54,57 +68,45 @@ function Jokes (props) {
             status: ''
         })
     }
-
-  const submitHandler = event => {
-    event.preventDefault();
-    if (!props.isUpdating) {
-      props.setJokeList([...props.myJoke, { ...jokeState }]);
-    } else if (props.isUpdating) {
-      //spreadOp
-      let updatedList = props.myJoke.filter(joke => joke.id !== jokeState.id);
-      let updatedListTwo = [...updatedList, jokeState];
-      props.setJokeList(updatedListTwo);
-    }
-
-    setJokeState({ name: "", description: "" });
-  };
   
-    console.log()
   return (
 
     <div>
     <TopHalfPage/>
-    <h2 style={JokeListHeading}>Dave's Joke Book</h2>
+    <h2 style={JokeListHeading}>My Joke Book</h2>
     <BigTitleDiv>
       <Title>Title</Title>
       <Title>Preview</Title>
+      <JokeCircle src={AddJokeCircle}/>
       <Title>Actions</Title>
       <Title>Public</Title>
       </BigTitleDiv>
       <Form>
-        <input 
+        <Input 
           type="text"
           placeholder="Title"
           name="title"
           value={jokeState.title}
           onChange={changeHandler}
         />
-        <input 
+        <Input 
           type="text"
           placeholder="ENTER JOKE HERE"
           name="joke"
           value={jokeState.joke}
           onChange={changeHandler}
         />
-        <input 
+        
+        <Input 
           type="text"
-          placeholder="public or private"
+          placeholder="public(no) or private(yes)"
           name="status"
           value={jokeState.status}
           onChange={changeHandler}
         />
+        
         <AddDaveJokeBookButton className="add-fun" onClick={addJoke}>
-          {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
+          Add your own fun!
         </AddDaveJokeBookButton>
 
       </Form>
