@@ -5,6 +5,7 @@ import menubaremoji from '../ImgFiles/menubaremoji.PNG';
 import { menuBarEmoji } from './StyledWidgets';
 
 
+
  const MenuBar = (props) => {
     const token = localStorage.getItem('token')
 
@@ -15,8 +16,8 @@ import { menuBarEmoji } from './StyledWidgets';
     console.log('props', props)
     if (token) {
         return (
-            <div>
-                <Menu attached='top'>
+            <div >
+                <Menu attached='top' >
                     <Dropdown item icon='bars' simple>
                         <Dropdown.Menu>
                             <div>
@@ -39,12 +40,18 @@ import { menuBarEmoji } from './StyledWidgets';
                             </div>
                         </Dropdown.Menu>
                     </Dropdown>
-
-                    <Menu.Menu position='left'>
-                        <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
-                        <h1>MeSoFunny</h1>
+                    <Menu.Menu position='left' >
+                            <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
+                            <h1  >MeSoFunny</h1>
                     </Menu.Menu>
-            
+                    <Menu.Menu position='right' >
+                        <h3 >Contact Us</h3>
+                        <h3>Settings</h3>
+                        <h3>Sign Out</h3>
+
+                    </Menu.Menu>
+
+
                 </Menu>
             </div>
         )
@@ -73,10 +80,16 @@ import { menuBarEmoji } from './StyledWidgets';
                         </Dropdown.Menu>
                     </Dropdown>
 
-                    <Menu.Menu position='left'>
-                        <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
-                        <h1>MeSoFunny</h1>
+                    <Menu.Menu position='left' >
+                            <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
+                            <h1  >MeSoFunny</h1>
                     </Menu.Menu>
+                    <Menu.Menu position='right' >
+                            <h3 >Contact Us</h3>
+                            <h3>Settings</h3>
+                            <h3>Sign Out</h3>
+                    </Menu.Menu>
+
 
                 </Menu>
             </div>
