@@ -12,7 +12,6 @@ import {testingBackground} from './components/StyledWidgets'
 import PublicJokes from './components/PublicJokes'
 
 
-
 function App() {
 
   return (

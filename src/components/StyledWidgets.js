@@ -2,22 +2,23 @@ export const jokeContainer = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    background: '#00668E',
+    background: '#00ABA6',
 }
 export const jokeCardStyle = {
     margin: '5px',
     padding: '4px',
-    border: '1px solid black',
 }
 
 export const JokeListHeading = {
     display: 'flex',
-    background: 'white',
-    padding: '10px auto',
-    border: '1px solid black',
-    width: '80%',
+    background: '#007672',
+    padding: '25px auto',
+    width: '75%',
     justifyContent: 'center',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    color: 'white',
+    margin: '0px',
+    marginLeft: '11%'
 }
 
 export const jokeTemplate = {
@@ -33,6 +34,6 @@ export const testingBackground = {
 }
 
 export const button = {
-    borderRadius: "10px",
+    borderRadius: "5px",
 
 }
