@@ -39,3 +39,9 @@ export const testingBackground = {
     background: "rgb(86, 177, 173)",
 }
 
+
+export const JokeCarder ={
+    display: 'flex',
+    flexDirection: 'column'
+}
+

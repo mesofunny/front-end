@@ -41,3 +41,8 @@
     transform: rotate(360deg);
   }
 }
+
+.ui.definition.table {
+  display: flex;
+  flex-direction: column;
+}
