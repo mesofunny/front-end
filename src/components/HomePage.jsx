@@ -1,17 +1,19 @@
 // Code for home page and joke of the day 
 
 // imports 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios"; 
 import '../homepage.css';
 import HomePageGrid from "./HomePageGrid";
 import dad from "./images/dad-quote.png"; 
+import { DataContext } from '../contexts/DataContext'
 
 
-const HomePage = () => {
+const HomePage = (props) => {
 
     // store joke of the day using hooks 
     const [joke, setJoke] = useState("")
+    const { searchJokesHandler } = useContext(DataContext)
     
     // use api to get joke of the day 
     useEffect(() => {
@@ -44,7 +46,7 @@ const HomePage = () => {
                 <h1 className="daily-joke">{joke}</h1>
             </div>
 
-            <HomePageGrid />
+            <HomePageGrid search={searchJokesHandler}/>
       </div>
     );
   }
