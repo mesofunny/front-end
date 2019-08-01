@@ -40,8 +40,8 @@ function JokeCard (props) {
       <p>
         <strong>Description: </strong> {props.joke.joke}
       </p>
-      <Modal trigger={<button>Edit</button>}>
-          <form  >
+      <Modal trigger={<Button>Edit</Button>}>
+          <Form>
         <input 
           type="text"
           placeholder="Title"
@@ -63,11 +63,11 @@ function JokeCard (props) {
           value={jokeState.status}
           onChange={changeHandler}
         />
-        <button onClick={editJoke}>
+        <Button onClick={editJoke}>
           Update Joke
-        </button>
+        </Button>
 
-      </form>
+      </Form>
         
       </Modal>
       

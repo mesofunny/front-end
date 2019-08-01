@@ -27,6 +27,12 @@ const Form = styled.form`
   display: flex;
   justify-content: center;
 `
+const Input = styled.input`
+  height: 30px;
+  width: 200px;
+  
+  `
+
 const AddDaveJokeBookButton = styled.button`
   display: flex;
   justify-content: center;
@@ -43,12 +49,8 @@ function Jokes (props) {
   const [jokeState, setJokeState] = useState({
     title: "",
     joke: "",
-    status: ''
+    status1: 'yes'
   });
-
-  // useEffect(() => {
-  //   setJokeState(props.update);
-  // }, [props.update]);
 
   const changeHandler = event => {
     setJokeState({
@@ -66,22 +68,7 @@ function Jokes (props) {
             status: ''
         })
     }
-
-  const submitHandler = event => {
-    event.preventDefault();
-    if (!props.isUpdating) {
-      props.setJokeList([...props.myJoke, { ...jokeState }]);
-    } else if (props.isUpdating) {
-      //spreadOp
-      let updatedList = props.myJoke.filter(joke => joke.id !== jokeState.id);
-      let updatedListTwo = [...updatedList, jokeState];
-      props.setJokeList(updatedListTwo);
-    }
-
-    setJokeState({ name: "", description: "" });
-  };
   
-    console.log()
   return (
 
     <div>
@@ -95,29 +82,31 @@ function Jokes (props) {
       <Title>Public</Title>
       </BigTitleDiv>
       <Form>
-        <input 
+        <Input 
           type="text"
           placeholder="Title"
           name="title"
           value={jokeState.title}
           onChange={changeHandler}
         />
-        <input 
+        <Input 
           type="text"
           placeholder="ENTER JOKE HERE"
           name="joke"
           value={jokeState.joke}
           onChange={changeHandler}
         />
-        <input 
+        
+        <Input 
           type="text"
-          placeholder="public or private"
+          placeholder="public(no) or private(yes)"
           name="status"
           value={jokeState.status}
           onChange={changeHandler}
         />
+        
         <AddDaveJokeBookButton className="add-fun" onClick={addJoke}>
-          {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
+          Add your own fun!
         </AddDaveJokeBookButton>
 
       </Form>
