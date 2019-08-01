@@ -12,11 +12,10 @@ export const jokeCardStyle = {
 export const menuIcon = {
     width: '120px',
     height: 'auto', 
-    filter: 'invert(1)'
     
 }
 export const menuBarEmoji = {
-    width: '100px',
+    width: '20%',
     height: 'auto'
 }
 export const JokeListHeading = {
