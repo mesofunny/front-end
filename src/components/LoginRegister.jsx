@@ -46,8 +46,11 @@ const LoginRegister = (props) => {
 
   if (!login) {
     return (
-      <div className="Container">
-        <div className="Login">
+      <div>
+       
+      <div className="Container" >
+        
+        <div className="Login" >
           <a href="#" style={{ textDecoration: "underline" }}>
             Login
           </a>
@@ -74,6 +77,7 @@ const LoginRegister = (props) => {
           />
           <button onClick={userLogin}>Login</button>
         </form>
+      </div>
       </div>
     );
   } else {

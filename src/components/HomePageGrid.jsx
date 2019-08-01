@@ -13,19 +13,19 @@ import friends from "./images/friends.png";
 import profile from "./images/profile.png"; 
 // import inbox from "./images/inbox.png"; 
 
-const HomePageGrid = () => {
+const HomePageGrid = (props) => {
     return (
         <div className="home-grid-container">
 
             <Menu.Item>
-                <Input icon='search' placeholder='Search joke...' />
+                <Input icon='search' placeholder='Search joke...' onKeyDown={props.search}/>
             </Menu.Item>
 
             <Grid className="home-grid">
 
                 
                 <Grid.Column>
-                    <Link to="/user"><Image src={book} className="home-grid-img"/></Link>
+                    <Link to="/jokes"><Image src={book} className="home-grid-img"/></Link>
                 </Grid.Column>
              
 

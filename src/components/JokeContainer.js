@@ -3,6 +3,12 @@ import React, {useState} from 'react';
 // import { jokeContainer } from "./components/StyledWidgets";
 import Jokes from "./components/Jokes.js";
 import JokeList from "./components/JokeList.js";
+import styled from "styled-components";
+
+const FlipDiv = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+`
 
 const JokeContainer = () =>  {
     const [myJoke, setJokeList] = useState([]);
@@ -10,18 +16,18 @@ const JokeContainer = () =>  {
     const [isUpdating, setIsUpdating] = useState(false);
 
     return(
-        <div>
+        <FlipDiv>
             <Jokes
                 myJoke={myJoke}
                 setJokeList={setJokeList}
                 update={update}
                 isUpdating={isUpdating}
             />
-            <JokeList 
-                myJoke={myJoke}
-                setUpdate={setUpdate}
-                setIsUpdating={setIsUpdating}
-            />  
+          <JokeList 
+              myJoke={myJoke}
+              setUpdate={setUpdate}
+              setIsUpdating={setIsUpdating}
+          />  
                   {/* {<PrivateRoute 
           path="/jokes"
           render={props => <Jokes {...props} 
@@ -40,7 +46,7 @@ const JokeContainer = () =>  {
             setIsUpdating={setIsUpdating} />
         }/>  */}
 
-      </div>
+      </FlipDiv>
       )
     }
     export default JokeContainer;
