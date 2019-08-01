@@ -32,7 +32,6 @@ const Input = styled.input`
   width: 200px;
   
   `
-
 const AddDaveJokeBookButton = styled.button`
   display: flex;
   justify-content: center;
