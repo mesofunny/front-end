@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import axios from "axios"; 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import LoginRegister from './components/LoginRegister'
 import HomePage from './components/HomePage'
@@ -8,7 +7,6 @@ import MenuBar from './components/MenuBar.js'
 import { testingBackground } from './components/StyledWidgets'
 import PublicJokes from "./components/PublicJokes";
 import Profile from "./components/Profile"; 
-import { DataContext } from './contexts/DataContext'; 
 import Jokes from "./components/Jokes";
 import { DataContext } from './contexts/DataContext'
 import axios from 'axios'
