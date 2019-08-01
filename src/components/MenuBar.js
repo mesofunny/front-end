@@ -61,6 +61,11 @@ import { menuBarEmoji } from './StyledWidgets';
                             </Link>
                             </div>
                             <div>
+                            <Link to ='/user'>
+                                <Dropdown.Item>Login</Dropdown.Item>
+                            </Link>
+                            </div>
+                            <div>
                             <Link to ='/public-feed'>
                                 <Dropdown.Item>Public Feed</Dropdown.Item>
                             </Link>
