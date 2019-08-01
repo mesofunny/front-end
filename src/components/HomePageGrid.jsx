@@ -5,6 +5,7 @@ import React from 'react';
 import { Grid, Image, Input, Menu } from "semantic-ui-react";
 import { Link } from 'react-router-dom'
 
+// image imports 
 import book from "./images/joke-book.png"; 
 import feed from "./images/public-feed.png"; 
 import favorites from "./images/favorites.png"; 

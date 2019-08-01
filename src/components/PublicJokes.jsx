@@ -4,8 +4,10 @@ import Footer from "./Footer";
 import PublicJokeCard from "./PublicJokeCard";
 import HomePage from "./HomePage";
 
+// use public jokes api to get information for PublicJokeCard 
 function PublicJokes () {
 
+    // stores an array of joke objects 
     const [publicJokesArray, setArray] = useState("")
 
     useEffect(() => {
@@ -14,12 +16,15 @@ function PublicJokes () {
                 .get("https://mesofunny.herokuapp.com/api/v1/jokes")
 
                 .then(response => {
-                    console.log(response.data.jokes)
+                    // successful
+
+                    // console.log("jokes array", response.data.jokes)
                     setArray(response.data.jokes)
                 })
 
                 .catch(error => {
-                console.log("Where are my jokes?", error)
+                    // unsuccessful 
+                    console.log("Where are my jokes?", error)
                 });
         }
 
@@ -27,16 +32,21 @@ function PublicJokes () {
     
     },[]);
 
-    console.log(publicJokesArray)
-
     return (
-        <div className="public-joke-feed">
+        <div className="public-joke-container">
             <HomePage />
-            {Array.from(publicJokesArray).map((jokeObject) => {
-               return (
-                   jokeObject.id % 2 === 0 ? <PublicJokeCard props={jokeObject} color={"blue-public-card"}/> : <PublicJokeCard props={jokeObject} color={"blue-public-white"}/>
-                   )
-            })}
+
+            <div className="public-joke-feed">
+                {/* map over public jokes array and render cards */}
+                {Array.from(publicJokesArray).map((jokeObject) => {
+
+                    // if the id is an even number, add blue card class else add white 
+                    return (
+                        jokeObject.id % 2 === 0 ? <PublicJokeCard props={jokeObject} color={"blue-public-card"}/> : <PublicJokeCard props={jokeObject} color={"white-public-card"}/>
+                    )
+                })}
+           </div>
+
             <Footer />
         </div>
     );

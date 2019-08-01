@@ -1,34 +1,64 @@
+/* Home page, Public feed, and Footer css */
+
+
+/* BEGINNING of HomePageGrid.jsx CSS 
+
+.home-container contains .daily-joke-container 
+
+.daily-joke-container contains .dad-quote-img and .daily-joke 
+
+*/
+
 .home-container {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    background: linear-gradient(rgb(205, 205, 205), #00668E);
+    width: 70%; 
+    margin: 0 auto; 
 }
 
 .daily-joke-container { 
-    height: 40vh; 
-    width: 70%; 
+    height: auto; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     text-align: center;
-    margin: 20px auto;  
-    padding: 40px;
-    background: rgb(216, 212, 212); 
+    margin: 0 auto;      
+}
+
+.dad-quote-img {
+    width: 100%; 
+    height: auto; 
+    object-fit: fill; 
 }
 
 .daily-joke {
-    font-size: 3.5vh; 
-    line-height: 2; 
+    width: 30%; 
+    position: absolute;
+    font-size: 2vw; 
+    line-height: 1.5; 
+    text-align: end;  
+    margin-left: 32%; 
 }
+/* END of HomePage.jsx CSS */
 
-.home-grid-container {
-    /* border: 1px solid green;  */
+
+
+/* BEGINNING of HomePageGrid.jsx CSS 
+
+.home-grid-container contains .home-grid (container for icons that link to pages)
+
+.home-grid contains 
+    -.ui.input (search bar)
+    -.ui.grid>.column:not(.row), .ui.grid>.row>.column (icons/images container)
+    -.home-grid-img (icons/images)
+*/
+.home-grid-container { 
     width: 70%; 
     margin: 20px auto; 
     display: flex;
     flex-direction: column; 
-    justify-content: space-evenly; 
+    justify-content: space-between;  
 }
 
 .home-grid {
@@ -37,16 +67,11 @@
     justify-content: space-evenly; 
 }
 
-.ui.labeled.icon.menu .item {
-    width: 33.33%; 
-    font-size: 3vw; 
-}
-
 .ui.input {
     width: 100%; 
     height: 40px; 
-    font-size: 1.5rem; 
-    margin-bottom: 10px; 
+    font-size: 1.5rem;  
+    margin: 30px auto;
 }
 
 .ui.grid>.column:not(.row), .ui.grid>.row>.column {
@@ -58,9 +83,35 @@
     vertical-align: top;
 }
 
-.column {
-    width: 100px; 
+.home-grid-img {
+    width: auto; 
+    height: 15vh; 
 }
+/* END of HomePageGrid.jsx CSS */
+
+
+
+/* BEGINNING of PublicJokes.jsx CSS 
+
+.public-joke-feed (container that holds the joke cards)
+
+*/
+
+.public-joke-feed {
+    width: 70%; 
+    margin: 0 auto; 
+}
+/* END of PublicJokes.jsx CSS */
+
+
+
+/* BEGINNING of PublicJokeCard.jsx CSS 
+
+.public-card (a single joke card)
+
+.ui.segment (all joke card text)
+
+*/
 
 .public-card {
     width: 100%; 
@@ -70,10 +121,15 @@
 .ui.segment {
     font-size: 2rem;
 }
+/* END of PublicJokeCard.jsx CSS */
 
-.blue-public-card {
-    background: rgb(36, 120, 154); 
-}
+
+
+/* BEGINNING of Footer.jsx CSS 
+
+.footer-container contains .footer-links
+
+*/
 
 .footer-container {
     width: 70%; 
@@ -91,3 +147,4 @@
     justify-content: space-between; 
     width: 35%; 
 }
+/* END of Footer.jsx CSS */

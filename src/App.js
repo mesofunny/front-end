@@ -17,16 +17,15 @@ function App() {
 
   return (
       <div style={testingBackground}>
-    <>
-      <Router>
-      <Route path="/" component={NavBar}/>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/user" component={LoginRegister} />
-      <Route path="/public" component={PublicJokes} />
-      <PrivateRoute path="/jokes" component={Jokes} />
-
-      </Router>
-    </>
+        <>
+          <Router>
+            <Route path="/" component={NavBar}/>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/user" component={LoginRegister} />
+            <Route path="/public" component={PublicJokes} />
+            <PrivateRoute path="/jokes" component={Jokes} />
+          </Router>
+        </>
       </div>
   );
 }
