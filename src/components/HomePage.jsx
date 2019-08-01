@@ -2,11 +2,10 @@
 
 // imports 
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import axios from "axios"; 
-import HomePageGrid from "./HomePageGrid";
 import '../homepage.css';
-
+import HomePageGrid from "./HomePageGrid";
+import dad from "./images/dad-quote.png"; 
 
 
 const HomePage = () => {
@@ -23,7 +22,7 @@ const HomePage = () => {
 
             .then(response => {
                 // successful 
-                console.log(response); 
+                console.log("response data", response); 
 
                 setJoke(response.data.joke.joke);
             })
@@ -41,11 +40,11 @@ const HomePage = () => {
     return (
       <div className="home-container">
             <div className="daily-joke-container">
+                <img src={dad} className="dad-quote-img"/>
                 <h1 className="daily-joke">{joke}</h1>
             </div>
 
             <HomePageGrid />
-            {/* <Footer /> */}
       </div>
     );
   }
