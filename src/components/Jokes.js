@@ -32,19 +32,19 @@ function Jokes (props) {
         })
     }
 
-  // const submitHandler = event => {
-  //   event.preventDefault();
-  //   if (!props.isUpdating) {
-  //     props.setJokeList([...props.myJoke, { ...jokeState }]);
-  //   } else if (props.isUpdating) {
-  //     //spreadOp
-  //     let updatedList = props.myJoke.filter(joke => joke.id !== jokeState.id);
-  //     let updatedListTwo = [...updatedList, jokeState];
-  //     props.setJokeList(updatedListTwo);
-  //   }
+  const submitHandler = event => {
+    event.preventDefault();
+    if (!props.isUpdating) {
+      props.setJokeList([...props.myJoke, { ...jokeState }]);
+    } else if (props.isUpdating) {
+      //spreadOp
+      let updatedList = props.myJoke.filter(joke => joke.id !== jokeState.id);
+      let updatedListTwo = [...updatedList, jokeState];
+      props.setJokeList(updatedListTwo);
+    }
 
-  //   setJokeState({ name: "", description: "" });
-  // };
+    setJokeState({ name: "", description: "" });
+  };
 
 
     console.log()
