@@ -8,7 +8,7 @@
 > MeSoFunny is unlike any joke app out there. Never again will users have to worry about forgetting the punchline, or retelling the same joke over and over again to the same audience. MeSoFunny helps users to store and search the best Dad Jokes out there. MeSoFunny will bring all the hilarity all the time.
 
 Checkout Our Work: https://gracious-galileo-09df10.netlify.com
-## technologies: 
+## Technologies: 
 
 Our application incorporates some great technologies such as the following listed below.
 
