@@ -33,7 +33,7 @@ const LoginRegister = (props) => {
       props.userLogin(input.form.email, input.form.password).then(res => {
           console.log('res', res)
           if (res) {
-            props.history.push('/jokes')
+            props.history.push('/')
           }
       }) 
   }
