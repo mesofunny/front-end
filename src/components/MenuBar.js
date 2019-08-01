@@ -5,12 +5,8 @@ import menubaremoji from '../ImgFiles/menubaremoji.PNG';
 import { menuBarEmoji } from './StyledWidgets';
 
 
-<<<<<<< HEAD
 
- const MenuBar = () => {
-=======
  const MenuBar = (props) => {
->>>>>>> 96223ca2f51851a27cb9f4444b16f39daa0c4fb2
     const token = localStorage.getItem('token')
 
      const logout = () => {
