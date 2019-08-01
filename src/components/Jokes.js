@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { fetchData, addData, deleteData, editData } from '../store/actions';
 import JokeList from './JokeList';
-import TopHalfPage from "./TopHalfPage"
+import TopHalfPage from "./TopHalfPage";
 import Footer from "./Footer";
-import styled from "styled-components"
+import styled from "styled-components";
 import {JokeListHeading} from './StyledWidgets';
 
 const Title = styled.h4 `
