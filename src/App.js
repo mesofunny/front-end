@@ -10,6 +10,8 @@ import PublicJokes from "./components/PublicJokes";
 import Profile from "./components/Profile"; 
 import { DataContext } from './contexts/DataContext'; 
 import Jokes from "./components/Jokes";
+import { DataContext } from './contexts/DataContext'
+import axios from 'axios'
 
 
 
