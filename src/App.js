@@ -15,13 +15,14 @@ import Favorites from './components/Favorites'
 import Friends from './components/Friends'
 import Inbox from './components/Inbox'
 import NewJokes from './components/NewJokes'
+import { testingBackground } from './components/StyledWidgets'
 
 
 
 function App() {
 
   return (
-      <div >
+      <div style={testingBackground}>
     <>
     <Router>
 

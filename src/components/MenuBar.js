@@ -41,17 +41,8 @@ import { menuBarEmoji } from './StyledWidgets';
                     </Dropdown.Menu>
             </Dropdown>
             <Menu.Menu position='left'>
-                <img src={menuBarEmoji} alt='menuBarEmoji' style={menuBarEmoji}/>
+                <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
                 <h1>MeSoFunny</h1>
-            </Menu.Menu>
-            <Menu.Menu position='right'>
-                <div className='ui right aligned category search item'>
-                <div className='ui transparent icon input'>
-                    <input className='prompt' type='text' placeholder='Search animals...' />
-                    <i className='search link icon' />
-                </div>
-                <div className='results' />
-                </div>
             </Menu.Menu>
         </Menu>
           </div>
