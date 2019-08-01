@@ -10,8 +10,9 @@ import AddJokeCircle from "./images/add-img-circle.png"
 
 
 const Title = styled.h1 `
-    padding: 15px 15px 0px 15px;
+    padding: 96px 15px 0px 15px;
     margin: 0px;
+    font-size: 1.8rem;
 `
 const BigTitleDiv = styled.div `
   display: inline-flex;
