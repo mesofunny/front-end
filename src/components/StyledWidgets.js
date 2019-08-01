@@ -7,18 +7,18 @@ export const jokeContainer = {
 export const jokeCardStyle = {
     margin: '5px',
     padding: '4px',
-    border: '1px solid black',
 }
 
 export const JokeListHeading = {
     display: 'flex',
     background: '#007672',
-    padding: '10px auto',
-    border: '1px solid black',
-    width: '80%',
+    padding: '25px auto',
+    width: '75%',
     justifyContent: 'center',
     borderRadius: '5px',
     color: 'white',
+    margin: '0px',
+    marginLeft: '11%'
 }
 
 export const jokeTemplate = {

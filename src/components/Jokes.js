@@ -5,20 +5,28 @@ import JokeList from './JokeList';
 import TopHalfPage from "./TopHalfPage"
 import Footer from "./Footer";
 import styled from "styled-components"
+import {JokeListHeading} from './StyledWidgets';
 
 const Title = styled.h4 `
-  display:flex;
-  justify-content: space-between;
-  size: 1vw;
+    padding: 15px 15px 0px 15px;
 `
-const TitleDiv = styled.div`
-  display: flex;
-`
-
 const BigTitleDiv = styled.div `
+  display: inline-flex;
+  justify-content: space-between;
   background: #99CED2;
+  width: 75%;
+  margin: 0%, 13%, 0%, 13%;
+  padding-bottom: 0px;
+  margin-left: 11%;
 `
-
+const Form = styled.form`
+  display: flex;
+  justify-content: center;
+`
+const AddDaveJokeBookButton = styled.button`
+  display: flex;
+  justify-content: center;
+`
 function Jokes (props) {
   const [jokeState, setJokeState] = useState({
     title: "",
@@ -66,21 +74,14 @@ function Jokes (props) {
 
     <div>
     <TopHalfPage/>
+    <h2 style={JokeListHeading}>Dave's Joke Book</h2>
     <BigTitleDiv>
-      <TitleDiv>
       <Title>Title</Title>
-      </TitleDiv>
-      <div>
-      <h4>Preview</h4>
-      </div>
-      <div>
-      <h4>Actions</h4>
-      </div>
-      <div>
-      <h4>Public</h4>
-      </div>
+      <Title>Preview</Title>
+      <Title>Actions</Title>
+      <Title>Public</Title>
       </BigTitleDiv>
-      <form  >
+      <Form>
         <input 
           type="text"
           placeholder="Title"
@@ -102,11 +103,11 @@ function Jokes (props) {
           value={jokeState.status}
           onChange={changeHandler}
         />
-        <button className="add-fun" onClick={addJoke}>
+        <AddDaveJokeBookButton className="add-fun" onClick={addJoke}>
           {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
-        </button>
+        </AddDaveJokeBookButton>
 
-      </form>
+      </Form>
       <JokeList />
       <Footer/>
     </div>
