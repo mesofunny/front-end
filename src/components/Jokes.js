@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux'
 import { fetchData, addData, deleteData, editData } from '../store/actions'
+import JokeList from './JokeList'
 
 
 
@@ -11,9 +12,9 @@ function Jokes (props) {
     status: ''
   });
 
-  useEffect(() => {
-    setJokeState(props.update);
-  }, [props.update]);
+  // useEffect(() => {
+  //   setJokeState(props.update);
+  // }, [props.update]);
 
   const changeHandler = event => {
     setJokeState({
@@ -50,6 +51,7 @@ function Jokes (props) {
     console.log()
   return (
     <div>
+      <JokeList />
       <form  >
         <input 
           type="text"

@@ -14,9 +14,6 @@ import PublicJokes from './components/PublicJokes'
 
 
 function App() {
-  const [myJoke, setJokeList] = useState([]);
-  const [update, setUpdate] = useState({});
-  const [isUpdating, setIsUpdating] = useState(false);
 
   return (
       <div style={testingBackground}>
@@ -26,25 +23,8 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route path="/user" component={LoginRegister} />
       <Route path="/public" component={PublicJokes} />
-      
-      <Route 
-        path="/jokes"
-        render={props => <JokeList {...props} 
-          myJoke={myJoke}
-          setUpdate={setUpdate}
-          setIsUpdating={setIsUpdating} />
-      }
-      />
-        <Route 
-        path="/jokes"
-        render={props => <Jokes {...props} 
-          myJoke={myJoke}
-          setJokeList={setJokeList}
-          update={update}
-          isUpdating={isUpdating} />
-      }
-      /> 
-      <PrivateRoute path="/test" component={Test} />
+      <PrivateRoute path="/jokes" component={Jokes} />
+
       </Router>
     </>
       </div>
