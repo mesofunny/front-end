@@ -10,6 +10,7 @@ import Profile from "./components/Profile";
 import Jokes from "./components/Jokes";
 
 
+
 function App() {
   const [data, setData] = useState([])
   const [filteredData, setFilteredData] = useState([])
