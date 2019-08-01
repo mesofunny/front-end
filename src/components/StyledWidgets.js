@@ -2,7 +2,7 @@ export const jokeContainer = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    background: '#00668E',
+    background: '#00ABA6',
 }
 export const jokeCardStyle = {
     margin: '5px',
@@ -30,7 +30,7 @@ export const jokeTemplate = {
 }
 
 export const testingBackground = {
-    background: '#00668E'
+    background: '#00ABA6'
 }
 
 export const button = {

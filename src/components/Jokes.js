@@ -2,14 +2,20 @@ import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { fetchData, addData, deleteData, editData } from '../store/actions';
 import JokeList from './JokeList';
+import TopHalfPage from "./TopHalfPage"
 import Footer from "./Footer";
 import styled from "styled-components"
 
 const Title = styled.h4 `
   display:flex;
+  justify-content: space-between;
+  size: 1vw;
+`
+const TitleDiv = styled.div`
+  display: flex;
 `
 
-const TitleDiv = styled.div `
+const BigTitleDiv = styled.div `
   background: #99CED2;
 `
 
@@ -54,15 +60,16 @@ function Jokes (props) {
 
     setJokeState({ name: "", description: "" });
   };
-
-
+  
     console.log()
   return (
+
     <div>
-    <TitleDiv>
-      <div>
+    <TopHalfPage/>
+    <BigTitleDiv>
+      <TitleDiv>
       <Title>Title</Title>
-      </div>
+      </TitleDiv>
       <div>
       <h4>Preview</h4>
       </div>
@@ -72,7 +79,7 @@ function Jokes (props) {
       <div>
       <h4>Public</h4>
       </div>
-      </TitleDiv>
+      </BigTitleDiv>
       <form  >
         <input 
           type="text"
