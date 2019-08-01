@@ -12,12 +12,13 @@ export const jokeCardStyle = {
 
 export const JokeListHeading = {
     display: 'flex',
-    background: 'white',
+    background: '#007672',
     padding: '10px auto',
     border: '1px solid black',
     width: '80%',
     justifyContent: 'center',
-    borderRadius: '5px'
+    borderRadius: '5px',
+    color: 'white',
 }
 
 export const jokeTemplate = {
@@ -33,6 +34,6 @@ export const testingBackground = {
 }
 
 export const button = {
-    borderRadius: "10px",
+    borderRadius: "5px",
 
 }

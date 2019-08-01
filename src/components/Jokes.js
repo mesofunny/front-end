@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { connect } from 'react-redux'
-import { fetchData, addData, deleteData, editData } from '../store/actions'
-import JokeList from './JokeList'
+import { connect } from 'react-redux';
+import { fetchData, addData, deleteData, editData } from '../store/actions';
+import JokeList from './JokeList';
+import Footer from "./Footer";
+import styled from "styled-components"
 
+const Title = styled.h4 `
+  display:flex;
+`
 
+const TitleDiv = styled.div `
+  background: #99CED2;
+`
 
 function Jokes (props) {
   const [jokeState, setJokeState] = useState({
@@ -51,7 +59,20 @@ function Jokes (props) {
     console.log()
   return (
     <div>
-      <JokeList />
+    <TitleDiv>
+      <div>
+      <Title>Title</Title>
+      </div>
+      <div>
+      <h4>Preview</h4>
+      </div>
+      <div>
+      <h4>Actions</h4>
+      </div>
+      <div>
+      <h4>Public</h4>
+      </div>
+      </TitleDiv>
       <form  >
         <input 
           type="text"
@@ -74,11 +95,13 @@ function Jokes (props) {
           value={jokeState.status}
           onChange={changeHandler}
         />
-        <button onClick={addJoke}>
+        <button className="add-fun" onClick={addJoke}>
           {props.isUpdating ? "Update your Joke" : "Add your own fun!"}
         </button>
 
       </form>
+      <JokeList />
+      <Footer/>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function JokeList (props) {
 
   return (
 <>
-<h2 style={JokeListHeading}>My Joke</h2>
+<h2 style={JokeListHeading}>Dave's Joke Book</h2>
 
     <div style={jokeContainer} >
      <div style={jokeTemplate}> 
