@@ -7,6 +7,7 @@ import MenuBar from './components/MenuBar.js'
 import { testingBackground } from './components/StyledWidgets'
 import PublicJokes from "./components/PublicJokes";
 import Profile from "./components/Profile"; 
+import Jokes from "./components/Jokes";
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/user" component={LoginRegister} />
             <Route path='/profile' component={Profile} />
             <Route path='/public-feed' component={PublicJokes} />
+            <Route path='/jokes' component={Jokes} />
           </Router>
         </>
       </div>
