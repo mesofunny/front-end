@@ -1,13 +1,18 @@
 .Container {
   font-family: sans-serif;
   text-align: center;
-  border: 1px solid white;
-  border-radius: 10px;
+  box-shadow: 1px 1px 6px 1px #686161;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10%;
   width: 500px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   margin: 50px auto;
-  background: white;
+  
+  background: #3FC5AB;
 }
 
 .Login {
@@ -15,6 +20,11 @@
   justify-content: space-evenly;
   width: 200px;
   margin: 0 auto;
+}
+
+.Container h1 {
+  color: white;
+  font-size: 50px;
 }
 
 .Container form {
@@ -27,31 +37,46 @@
 .Container form input {
   margin: 10px;
   border-radius: 5px;
-  height: 25px;
-  background: rgb(236, 224, 152);
+  height: 30px;
+  /* background: rgb(236, 224, 152); */
   outline: none;
+  border: none;
+  
 }
 
 .Container a {
   text-decoration: none;
-  color: rgb(133, 119, 119);
+  color: #845CBC;
   margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .Container button {
-  background: rgb(165, 19, 165);
+  background: #845CBC;
   border-radius: 5px;
   color: white;
-  height: 30px;
-  width: 150px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  height: 40px;
+  width: 250px;
+  margin-top: 20px;
+  border: none;
+  /* margin-bottom: 50px; */
   outline: none;
   cursor: pointer;
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  /* height: 200px;
+  width: 200px; */
   margin: 0 auto;
+  border-radius: 10px;
+  
+}
+
+::placeholder {
+  color: rgb(174, 175, 175);
+}
+
+.outer-container {
+  height: 800px;
 }
