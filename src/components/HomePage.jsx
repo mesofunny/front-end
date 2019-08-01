@@ -22,7 +22,7 @@ const HomePage = () => {
 
             .then(response => {
                 // successful 
-                console.log(response); 
+                console.log("response data", response); 
 
                 setJoke(response.data.joke.joke);
             })
