@@ -99,7 +99,6 @@
 */
 
 .public-joke-feed {
-    width: %; 
     margin: 0 auto; 
 }
 /* END of PublicJokes.jsx CSS */
@@ -122,7 +121,7 @@
 .public-card {
     width: 75%; 
     margin-bottom: 40px;
-    margin-left: 11%; 
+    margin-left: 11%;
 }
 
 .ui.segment {
@@ -161,3 +160,4 @@
     width: 70%; 
     margin: 0 auto; 
 }
+

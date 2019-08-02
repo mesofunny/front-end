@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'semantic-ui-react';
 import menubaremoji from '../ImgFiles/menubaremoji.PNG';
-import { menuBarEmoji } from './StyledWidgets';
+import { menuBarEmoji, NavBarMenu } from './StyledWidgets';
 
 
 
@@ -16,42 +16,36 @@ import { menuBarEmoji } from './StyledWidgets';
     console.log('props', props)
     if (token) {
         return (
-            <div >
+            <div style={NavBarMenu} >
                 <Menu attached='top' >
                     <Dropdown item icon='bars' simple>
                         <Dropdown.Menu>
                             <div>
                             <Link to='/' >
-                                <Dropdown.Item>Home</Dropdown.Item>
+                                <Dropdown.Item className="nav">Home</Dropdown.Item>
                             </Link>
                             </div>
                             <div>
                             <Link to='/contact' >
-                                <Dropdown.Item>Contact Us</Dropdown.Item>
+                                <Dropdown.Item className="nav">Contact Us</Dropdown.Item>
                             </Link>
                             </div>
                             <div>
                             <Link to ='/profile'>
-                                <Dropdown.Item>Profile</Dropdown.Item>
+                                <Dropdown.Item className="nav">Profile</Dropdown.Item>
                             </Link>
                             </div>
                             <div>
-                                <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
+                                <Dropdown.Item onClick={logout} className="nav">Logout</Dropdown.Item>
                             </div>
                         </Dropdown.Menu>
                     </Dropdown>
+
                     <Menu.Menu position='left' >
                             <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
-                            <h1  >MeSoFunny</h1>
+                            <h1>MeSoFunny</h1>
                     </Menu.Menu>
-                    <Menu.Menu position='right' >
-                        <h3 >Contact Us</h3>
-                        <h3>Settings</h3>
-                        <h3>Sign Out</h3>
-
-                    </Menu.Menu>
-
-
+                    
                 </Menu>
             </div>
         )
@@ -84,13 +78,6 @@ import { menuBarEmoji } from './StyledWidgets';
                             <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
                             <h1  >MeSoFunny</h1>
                     </Menu.Menu>
-                    <Menu.Menu position='right' >
-                            <h3 >Contact Us</h3>
-                            <h3>Settings</h3>
-                            <h3>Sign Out</h3>
-                    </Menu.Menu>
-
-
                 </Menu>
             </div>
         )
