@@ -39,27 +39,30 @@ function JokeCard (props) {
           <Table.Cell width={3}>{props.joke.title}</Table.Cell>
           <Table.Cell>{props.joke.joke}</Table.Cell>
           <Table.Cell><input type="text" placeholder="public or private" name="status" value={jokeState.status} onChange={changeHandler}/></Table.Cell>
-          <Table.Cell><Modal trigger={<Button>Edit</Button>}></Modal></Table.Cell>
-            <Form>
-              <input  
-                  type="text"
-                  placeholder="ENTER JOKE HERE"
-                  name="joke"
-                  value={jokeState.joke}
-                  onChange={changeHandler}
-                  /> 
-              <input 
-                  type="text"
-                  placeholder="public or private"
-                  name="status"
-                  value={jokeState.status}
-                  onChange={changeHandler}
-                  />
+          <Table.Cell>
+            <Modal trigger={<Button>Edit</Button>}>
+              <Form>
+                  <input  
+                      type="text"
+                      placeholder="ENTER JOKE HERE"
+                      name="joke"
+                      value={jokeState.joke}
+                      onChange={changeHandler}
+                      /> 
+                  <input 
+                      type="text"
+                      placeholder="public or private"
+                      name="status"
+                      value={jokeState.status}
+                      onChange={changeHandler}
+                      />
 
-                <Button onClick={editJoke}>
-                  Update Joke
-                </Button>
-            </Form> 
+                    <Button onClick={editJoke}>
+                      Update Joke
+                    </Button>
+                </Form>
+              </Modal>
+            </Table.Cell>
         </Table.Row>
       </Table.Body>
     </Table>
