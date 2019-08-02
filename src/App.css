@@ -66,21 +66,17 @@
   align-items: center; 
   
 }
-
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child{
   margin-top: 0;
 }
-
 .nav {
   font-size: 2vh; 
   margin: 30px; 
   width: 8vw; 
 }
-
 .ui.menu:not(.vertical) .item {
   font-size: 2rem; 
 }
-
 .oops-image {
   margin-left: 11%; 
   width: 75%;
