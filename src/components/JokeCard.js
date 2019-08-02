@@ -40,6 +40,13 @@ function JokeCard (props) {
           <Table.Cell>
             <Modal trigger={<Button>Edit</Button>}>
               <Form>
+                <input 
+                      type="text"
+                      placeholder="title"
+                      name="title"
+                      value={jokeState.title}
+                      onChange={changeHandler}
+                      />
                   <input  
                       type="text"
                       placeholder="ENTER JOKE HERE"
@@ -54,6 +61,7 @@ function JokeCard (props) {
                       value={jokeState.status}
                       onChange={changeHandler}
                       />
+                      
 
                     <Button onClick={editJoke}>
                       Update Joke
