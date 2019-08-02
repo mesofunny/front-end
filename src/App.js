@@ -10,6 +10,8 @@ import Profile from "./components/Profile";
 import Jokes from "./components/Jokes";
 import { DataContext } from './contexts/DataContext'
 import axios from 'axios'
+import Footer from "./components/Footer";
+import NeedUpdate from "./components/NeedUpdate";
 
 
 function App(props) {
@@ -56,6 +58,9 @@ const searchJokesHandler = e => {
             <Route path='/profile' component={Profile} />
             <Route path='/public-feed' component={PublicJokes} />
             <Route path="/jokes" component={Jokes} />
+            <Route path="/favorites" component={NeedUpdate} />
+            <Route path="/friends" component={NeedUpdate} />
+            <Route path="/" component={Footer} />
           </Router>
           </DataContext.Provider>
         </>
