@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
-
-const options = [
-  { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
-  { key: 'o', text: 'Other', value: 'other' },
-]
+import { Button, Form, Input, Radio, TextArea } from 'semantic-ui-react'
 
 class Profile extends Component {
   state = {}
@@ -24,32 +18,38 @@ class Profile extends Component {
             {/* <Form.Field control={Select} label='Gender' options={options} placeholder='Gender' /> */}
           </Form.Group>
           <Form.Group inline>
+            <Form.Field control={Input} label='Email' placeholder='Email' />
             <label>Gender</label>
             <Form.Field
               control={Radio}
-              label='Male'
+              label='M'
               value='1'
               checked={value === '1'}
               onChange={this.handleChange}
             />
             <Form.Field
               control={Radio}
-              label='Female'
+              label='F'
               value='2'
               checked={value === '2'}
               onChange={this.handleChange}
             />
             <Form.Field
               control={Radio}
-              label='Other'
+              label='X'
               value='3'
               checked={value === '3'}
               onChange={this.handleChange}
             />
           </Form.Group>
-          <Form.Field control={TextArea} label='About' placeholder='Tell us more about you...' />
-          <Form.Field control={Checkbox} label='I agree to the Terms and Conditions' />
-          <Form.Field control={Button}>Submit</Form.Field>
+          <Form.Field control={TextArea} label='Bio' placeholder='Tell us more about you...' />
+          <Form.Group inline>
+            <label>Make Profile Public?</label>
+            <Form.Field control={Radio} label='Yes.' />
+            <Form.Field control={Radio} label='No.' />
+          </Form.Group>
+          
+          <Form.Field control={Button}>Save</Form.Field>
         </Form>
       </div>
     )

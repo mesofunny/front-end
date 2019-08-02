@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from "react";
-import { jokeCardStyle } from './StyledWidgets.js'
+import React, { useState } from "react";
 import { connect } from 'react-redux'
 import { fetchData, addData, deleteData, editData } from '../store/actions'
-import { Divider, Header, Icon, Table } from 'semantic-ui-react'
-import { Modal, Form, Button } from 'semantic-ui-react'
+import { Button, Form, Modal, Table } from 'semantic-ui-react'
 
 
 function JokeCard (props) {
