@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import { jokeCardStyle } from '../../styles/StyledWidgets'
+import { jokeCardStyle } from './StyledWidgets.js'
 import { connect } from 'react-redux'
-import { fetchData, addData, deleteData, editData } from '../../store/actions'
+import { fetchData, addData, deleteData, editData } from '../store/actions'
 import { Divider, Header, Icon, Table } from 'semantic-ui-react'
 import { Modal, Form, Button } from 'semantic-ui-react'
 
@@ -39,15 +39,8 @@ function JokeCard (props) {
           <Table.Cell width={3}>{props.joke.title}</Table.Cell>
           <Table.Cell>{props.joke.joke}</Table.Cell>
           <Table.Cell><input type="text" placeholder="public or private" name="status" value={jokeState.status} onChange={changeHandler}/></Table.Cell>
-          <Table.Cell><Modal trigger={<Button>Edit</Button>}>
+          <Table.Cell><Modal trigger={<Button>Edit</Button>}></Modal></Table.Cell>
             <Form>
-              <input  
-                  type="text"
-                  placeholder="Title"
-                  name="title"
-                  value={jokeState.title}
-                  onChange={changeHandler}
-                  /> 
               <input  
                   type="text"
                   placeholder="ENTER JOKE HERE"
@@ -67,8 +60,6 @@ function JokeCard (props) {
                   Update Joke
                 </Button>
             </Form> 
-            </Modal>
-            </Table.Cell>
         </Table.Row>
       </Table.Body>
     </Table>
