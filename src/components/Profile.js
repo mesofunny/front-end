@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
-import { Button, Form, Input, Radio, TextArea } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Button, Form, Input, Radio, TextArea } from 'semantic-ui-react';
+import HomePage from './HomePage';
+import { JokeListHeading } from './StyledWidgets';
 
 class Profile extends Component {
   state = {}
@@ -9,6 +11,9 @@ class Profile extends Component {
   render() {
     const { value } = this.state
     return (
+      <> 
+      <HomePage/>
+      <h2 style={JokeListHeading}>Profile</h2>
       <div className="profile-form">
         <Form>
           <Form.Group widths='equal'>
@@ -52,6 +57,7 @@ class Profile extends Component {
           <Form.Field control={Button}>Save</Form.Field>
         </Form>
       </div>
+    </>
     )
   }
 }

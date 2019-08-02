@@ -35,11 +35,11 @@ const HomePageGrid = (props) => {
                 </Grid.Column>
 
                 <Grid.Column>
-                    <Link to="/"><Image src={favorites} className="home-grid-img"/></Link>
+                    <Link to="/favorites"><Image src={favorites} className="home-grid-img"/></Link>
                 </Grid.Column>
 
                 <Grid.Column>
-                    <Link to="/"><Image src={friends} className="home-grid-img"/></Link>
+                    <Link to="/friends"><Image src={friends} className="home-grid-img"/></Link>
                 </Grid.Column>
 
                 <Grid.Column>

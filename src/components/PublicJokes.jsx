@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import PublicJokesContainer from "./PublicJokesContainer";
 import HomePage from "./HomePage";
 import { DataContext } from '../contexts/DataContext';
-import {JokeListHeading} from './StyledWidgets';
+import { JokeListHeading } from './StyledWidgets';
 
 
 // use public jokes api to get information for PublicJokeCard 
@@ -20,8 +20,7 @@ function PublicJokes () {
                 <PublicJokesContainer jokes={filteredData.length > 0 
                 ? filteredData : data } />
             </div>
-
-            <Footer />
+            
         </div>
     );
 
