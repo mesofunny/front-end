@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import LoginRegister from './components/Login/LoginRegister'
-import HomePage from './components/HomePage/HomePage'
-import MenuBar from './components/NavFooter/MenuBar'
-import { testingBackground } from './styles/StyledWidgets'
-import PublicJokes from "./components/PublicJokes/PublicJokes";
-import Profile from "./components/HomePage/Profile"; 
-import Jokes from "./components/PrivateJokes/Jokes";
+import LoginRegister from './components/LoginRegister'
+import HomePage from './components/HomePage'
+import MenuBar from './components/MenuBar.js'
+import { testingBackground } from './components/StyledWidgets'
+import PublicJokes from "./components/PublicJokes";
+import Profile from "./components/Profile"; 
+import Jokes from "./components/Jokes";
 import { DataContext } from './contexts/DataContext'
 import axios from 'axios'
 
