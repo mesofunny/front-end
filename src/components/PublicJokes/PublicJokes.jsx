@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios"; 
-import Footer from "./Footer";
+import Footer from "../NavFooter/Footer";
 import PublicJokesContainer from "./PublicJokesContainer";
-import HomePage from "./HomePage";
-import { DataContext } from '../contexts/DataContext'
+import HomePage from "../HomePage/HomePage";
+import { DataContext } from '../../contexts/DataContext'
 
 
 // use public jokes api to get information for PublicJokeCard 
