@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { connect } from 'react-redux'
-import { userLogin, register } from '../store/actions'
+import { userLogin, register } from '../../store/actions'
 import { withRouter } from 'react-router-dom'
-import '../login.css'
-import menubaremoji from '../ImgFiles/emoji.png';
+import '../../styles/login.css'
+import menubaremoji from '../../ImgFiles/emoji.png';
 
 const LoginRegister = (props) => {
   const [input, setInput] = useState({

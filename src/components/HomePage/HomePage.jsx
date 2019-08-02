@@ -3,10 +3,10 @@
 // imports 
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios"; 
-import '../homepage.css';
+import '../../styles/homepage.css';
 import HomePageGrid from "./HomePageGrid";
-import dad from "./images/dad-quote.png"; 
-import { DataContext } from '../contexts/DataContext'
+import dad from "../images/dad-quote.png"; 
+import { DataContext } from '../../contexts/DataContext'
 
 
 const HomePage = (props) => {

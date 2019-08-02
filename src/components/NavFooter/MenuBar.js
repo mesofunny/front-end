@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'semantic-ui-react';
-import menubaremoji from '../ImgFiles/menubaremoji.PNG';
-import { menuBarEmoji } from './StyledWidgets';
+import menubaremoji from '../../ImgFiles/menubaremoji.PNG';
+import { menuBarEmoji } from '../../styles/StyledWidgets';
 
 
 
