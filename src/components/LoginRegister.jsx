@@ -45,6 +45,7 @@ const LoginRegister = (props) => {
     props.history.push('/jokes')
   }
 
+  //login/register 
   if (!login) {
     return (
       <div className="outer-container">
