@@ -44,12 +44,6 @@ import { menuBarEmoji } from './StyledWidgets';
                             <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
                             <h1  >MeSoFunny</h1>
                     </Menu.Menu>
-                    <Menu.Menu position='right' >
-                        <h3 >Contact Us</h3>
-                        <h3>Settings</h3>
-                        <h3>Sign Out</h3>
-
-                    </Menu.Menu>
 
 
                 </Menu>
@@ -84,13 +78,6 @@ import { menuBarEmoji } from './StyledWidgets';
                             <img src={menubaremoji} alt='menuBarEmoji' style={menuBarEmoji}/>
                             <h1  >MeSoFunny</h1>
                     </Menu.Menu>
-                    <Menu.Menu position='right' >
-                            <h3 >Contact Us</h3>
-                            <h3>Settings</h3>
-                            <h3>Sign Out</h3>
-                    </Menu.Menu>
-
-
                 </Menu>
             </div>
         )
