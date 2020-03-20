@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
-import { Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
-
-const options = [
-  { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
-  { key: 'o', text: 'Other', value: 'other' },
-]
+import React, { Component } from 'react';
+import { Button, Form, Input, Radio, TextArea } from 'semantic-ui-react';
+import HomePage from './HomePage';
+import { JokeListHeading } from './StyledWidgets';
 
 class Profile extends Component {
   state = {}
@@ -15,40 +11,53 @@ class Profile extends Component {
   render() {
     const { value } = this.state
     return (
-      <Form>
-        <Form.Group widths='equal'>
-          <Form.Field control={Input} label='First name' placeholder='First name' />
-          <Form.Field control={Input} label='Last name' placeholder='Last name' />
-          <Form.Field control={Select} label='Gender' options={options} placeholder='Gender' />
-        </Form.Group>
-        <Form.Group inline>
-          <label>Quantity</label>
-          <Form.Field
-            control={Radio}
-            label='One'
-            value='1'
-            checked={value === '1'}
-            onChange={this.handleChange}
-          />
-          <Form.Field
-            control={Radio}
-            label='Two'
-            value='2'
-            checked={value === '2'}
-            onChange={this.handleChange}
-          />
-          <Form.Field
-            control={Radio}
-            label='Three'
-            value='3'
-            checked={value === '3'}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <Form.Field control={TextArea} label='About' placeholder='Tell us more about you...' />
-        <Form.Field control={Checkbox} label='I agree to the Terms and Conditions' />
-        <Form.Field control={Button}>Submit</Form.Field>
-      </Form>
+      <> 
+      <HomePage/>
+      <h2 style={JokeListHeading}>Profile</h2>
+      <div className="profile-form">
+        <Form>
+          <Form.Group widths='equal'>
+            <Form.Field control={Input} label='Name' placeholder='Name' />
+            <Form.Field control={Input} label='Date of Birth' placeholder='MM/DD/YY' />
+            <Form.Field control={Input} label='Locations' placeholder='Locations' />
+            {/* <Form.Field control={Select} label='Gender' options={options} placeholder='Gender' /> */}
+          </Form.Group>
+          <Form.Group inline>
+            <Form.Field control={Input} label='Email' placeholder='Email' />
+            <label>Gender</label>
+            <Form.Field
+              control={Radio}
+              label='M'
+              value='1'
+              checked={value === '1'}
+              onChange={this.handleChange}
+            />
+            <Form.Field
+              control={Radio}
+              label='F'
+              value='2'
+              checked={value === '2'}
+              onChange={this.handleChange}
+            />
+            <Form.Field
+              control={Radio}
+              label='X'
+              value='3'
+              checked={value === '3'}
+              onChange={this.handleChange}
+            />
+          </Form.Group>
+          <Form.Field control={TextArea} label='Bio' placeholder='Tell us more about you...' />
+          <Form.Group inline>
+            <label>Make Profile Public?</label>
+            <Form.Field control={Radio} label='Yes.' />
+            <Form.Field control={Radio} label='No.' />
+          </Form.Group>
+          
+          <Form.Field control={Button}>Save</Form.Field>
+        </Form>
+      </div>
+    </>
     )
   }
 }

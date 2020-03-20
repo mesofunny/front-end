@@ -11,7 +11,7 @@ import feed from "./images/public-feed.png";
 import favorites from "./images/favorites.png"; 
 import friends from "./images/friends.png"; 
 import profile from "./images/profile.png"; 
-// import inbox from "./images/inbox.png"; 
+
 
 const HomePageGrid = (props) => {
     const token = localStorage.getItem('token')
@@ -35,16 +35,12 @@ const HomePageGrid = (props) => {
                 </Grid.Column>
 
                 <Grid.Column>
-                    <Link to="/"><Image src={favorites} className="home-grid-img"/></Link>
+                    <Link to="/favorites"><Image src={favorites} className="home-grid-img"/></Link>
                 </Grid.Column>
 
                 <Grid.Column>
-                    <Link to="/"><Image src={friends} className="home-grid-img"/></Link>
+                    <Link to="/friends"><Image src={friends} className="home-grid-img"/></Link>
                 </Grid.Column>
-
-                {/* <Grid.Column className="inbox">
-                    <Image src={inbox} />
-                </Grid.Column> */}
 
                 <Grid.Column>
                     <Link to="/profile"><Image src={profile} className="home-grid-img"/></Link>

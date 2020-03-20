@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from 'react-redux';
 import { fetchData, addData, deleteData, editData } from '../store/actions';
 import JokeList from './JokeList';
 import TopHalfPage from "./TopHalfPage";
-import Footer from "./Footer";
 import styled from "styled-components";
 import {JokeListHeading} from './StyledWidgets';
 import AddJokeCircle from "./images/add-img-circle.png"
@@ -32,7 +31,6 @@ const Input = styled.input`
   width: 200px;
   
   `
-
 const AddDaveJokeBookButton = styled.button`
   display: flex;
   justify-content: center;
@@ -72,46 +70,45 @@ function Jokes (props) {
   return (
 
     <div>
-    <TopHalfPage/>
-    <h2 style={JokeListHeading}>My Joke Book</h2>
-    <BigTitleDiv>
-      <Title>Title</Title>
-      <Title>Preview</Title>
-      <JokeCircle src={AddJokeCircle}/>
-      <Title>Actions</Title>
-      <Title>Public</Title>
-      </BigTitleDiv>
-      <Form>
-        <Input 
-          type="text"
-          placeholder="Title"
-          name="title"
-          value={jokeState.title}
-          onChange={changeHandler}
-        />
-        <Input 
-          type="text"
-          placeholder="ENTER JOKE HERE"
-          name="joke"
-          value={jokeState.joke}
-          onChange={changeHandler}
-        />
-        
-        <Input 
-          type="text"
-          placeholder="public(no) or private(yes)"
-          name="status"
-          value={jokeState.status}
-          onChange={changeHandler}
-        />
-        
-        <AddDaveJokeBookButton className="add-fun" onClick={addJoke}>
-          Add your own fun!
-        </AddDaveJokeBookButton>
+      <TopHalfPage/>
+      <h2 style={JokeListHeading}>My Joke Book</h2>
+      <BigTitleDiv>
+        <Title>Title</Title>
+        <Title>Preview</Title>
+        <JokeCircle src={AddJokeCircle}/>
+        <Title>Actions</Title>
+        <Title>Public</Title>
+        </BigTitleDiv>
+        <Form>
+          <Input 
+            type="text"
+            placeholder="Title"
+            name="title"
+            value={jokeState.title}
+            onChange={changeHandler}
+          />
+          <Input 
+            type="text"
+            placeholder="ENTER JOKE HERE"
+            name="joke"
+            value={jokeState.joke}
+            onChange={changeHandler}
+          />
+          
+          <Input 
+            type="text"
+            placeholder="public(no) or private(yes)"
+            name="status"
+            value={jokeState.status}
+            onChange={changeHandler}
+          />
+          
+          <AddDaveJokeBookButton className="add-fun" onClick={addJoke}>
+            Add your own fun!
+          </AddDaveJokeBookButton>
 
-      </Form>
-      <JokeList />
-      <Footer/>
+        </Form>
+        <JokeList />
     </div>
   );
 }

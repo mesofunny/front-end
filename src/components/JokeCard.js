@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from "react";
-import { jokeCardStyle } from './StyledWidgets.js'
+import React, { useState } from "react";
 import { connect } from 'react-redux'
 import { fetchData, addData, deleteData, editData } from '../store/actions'
-import { Divider, Header, Icon, Table } from 'semantic-ui-react'
-import { Modal, Form, Button } from 'semantic-ui-react'
+import { Button, Form, Modal, Table } from 'semantic-ui-react'
 
 
 function JokeCard (props) {
@@ -33,33 +31,44 @@ function JokeCard (props) {
   console.log(props.jokes.id)
 
   return (
-    <Table definition>
+    <Table definition className="Table">
       <Table.Body>
         <Table.Row>
           <Table.Cell width={3}>{props.joke.title}</Table.Cell>
           <Table.Cell>{props.joke.joke}</Table.Cell>
           <Table.Cell><input type="text" placeholder="public or private" name="status" value={jokeState.status} onChange={changeHandler}/></Table.Cell>
-          <Table.Cell><Modal trigger={<Button>Edit</Button>}></Modal></Table.Cell>
-            <Form>
-              <input  
-                  type="text"
-                  placeholder="ENTER JOKE HERE"
-                  name="joke"
-                  value={jokeState.joke}
-                  onChange={changeHandler}
-                  /> 
-              <input 
-                  type="text"
-                  placeholder="public or private"
-                  name="status"
-                  value={jokeState.status}
-                  onChange={changeHandler}
-                  />
+          <Table.Cell>
+            <Modal trigger={<Button>Edit</Button>}>
+              <Form>
+                <input 
+                      type="text"
+                      placeholder="title"
+                      name="title"
+                      value={jokeState.title}
+                      onChange={changeHandler}
+                      />
+                  <input  
+                      type="text"
+                      placeholder="ENTER JOKE HERE"
+                      name="joke"
+                      value={jokeState.joke}
+                      onChange={changeHandler}
+                      /> 
+                  <input 
+                      type="text"
+                      placeholder="public or private"
+                      name="status"
+                      value={jokeState.status}
+                      onChange={changeHandler}
+                      />
+                      
 
-                <Button onClick={editJoke}>
-                  Update Joke
-                </Button>
-            </Form> 
+                    <Button onClick={editJoke}>
+                      Update Joke
+                    </Button>
+                </Form>
+              </Modal>
+            </Table.Cell>
         </Table.Row>
       </Table.Body>
     </Table>
