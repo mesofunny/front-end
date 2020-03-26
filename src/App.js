@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import axios from "axios";
 
 import LoginRegister from "./components/LoginRegister";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 import MenuBar from "./pages/MenuBar.js";
 import PublicJokes from "./components/PublicJokes";
 import Profile from "./components/Profile";
@@ -11,7 +11,7 @@ import Jokes from "./components/Jokes";
 import Footer from "./components/Footer";
 import NeedUpdate from "./components/NeedUpdate";
 
-import { DataContext } from "./contexts/DataContext";
+import { DataContext } from "./utils/DataContext";
 
 import "./App.css";
 

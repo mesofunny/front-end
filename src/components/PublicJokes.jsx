@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import Footer from "./Footer";
 import PublicJokesContainer from "./PublicJokesContainer";
-import HomePage from "./HomePage";
-import { DataContext } from "../contexts/DataContext";
+import HomePage from "../pages/HomePage";
+import { DataContext } from "../utils/DataContext";
 
 // use public jokes api to get information for PublicJokeCard
 function PublicJokes() {

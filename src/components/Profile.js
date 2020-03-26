@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, Input, Radio, TextArea } from "semantic-ui-react";
-import HomePage from "./HomePage";
+import HomePage from "../pages/HomePage";
 
 class Profile extends Component {
 	state = {};

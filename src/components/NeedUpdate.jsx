@@ -1,6 +1,6 @@
 import React from "react";
-import oopsImage from "./images/image.png";
-import HomePage from "./HomePage";
+import oopsImage from "../assets/image.png";
+import HomePage from "../pages/HomePage";
 
 const NeedUpdate = () => {
 	return (

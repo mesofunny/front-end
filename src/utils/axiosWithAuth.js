@@ -10,3 +10,7 @@ export const axiosWithAuth = () => {
 		baseURL: "https://DadJokes.herokuapp.com",
 	});
 };
+
+export const call = () => {
+	return axios.create({ baseURL: "https://DadJokes.herokuapp.com" });
+};

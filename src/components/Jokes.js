@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { fetchData, addData, deleteData, editData } from "../store/actions";
+import {
+	fetchData,
+	addData,
+	deleteData,
+	editData,
+} from "../utils/store/reducers";
 import JokeList from "./JokeList";
 import TopHalfPage from "./TopHalfPage";
 import styled from "styled-components";
-import AddJokeCircle from "./images/add-img-circle.png";
+import AddJokeCircle from "../assets/add-img-circle.png";
 
 const Title = styled.h1`
 	padding: 96px 15px 0px 15px;

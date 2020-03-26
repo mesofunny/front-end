@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import JokeCard from "./JokeCard";
 import { connect } from "react-redux";
-import { fetchData, addData, deleteData, editData } from "../store/actions";
+import {
+	fetchData,
+	addData,
+	deleteData,
+	editData,
+} from "../utils/store/reducers";
 import { Button } from "semantic-ui-react";
 
 function JokeList(props) {

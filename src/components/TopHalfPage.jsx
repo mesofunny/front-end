@@ -1,14 +1,14 @@
-import React from 'react'
-import HomePage from './HomePage'
+import React from "react";
+import HomePage from "../pages/HomePage";
 // import HomePageGrid from './HomePageGrid'
 
 const TopHalfPage = () => {
-    return (
-        <>
-            <HomePage/>
-            {/* <HomePageGrid/> */}
-        </>
-    )
-}
+	return (
+		<>
+			<HomePage />
+			{/* <HomePageGrid/> */}
+		</>
+	);
+};
 
-export default TopHalfPage
+export default TopHalfPage;

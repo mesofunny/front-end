@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import menubaremoji from "../ImgFiles/menubaremoji.PNG";
+import menubaremoji from "../assets/menubaremoji.PNG";
 // adding scss
 import "./pages.scss";
 
