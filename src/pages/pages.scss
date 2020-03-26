@@ -1,0 +1,24 @@
+@mixin flex($content, $direction) {
+	display: flex;
+	justify-content: $content;
+	flex-direction: $direction;
+}
+
+.heading {
+	@include flex(space-around, row);
+	img {
+		margin: 0;
+	}
+}
+.links {
+	@include flex(space-around, row);
+	text-align: center;
+	a {
+		width: 100%;
+		padding: 4% 1%;
+		color: black;
+	}
+	a:hover {
+		background: #4183c4;
+	}
+}
