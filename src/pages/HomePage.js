@@ -4,7 +4,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { DataContext } from "../utils/DataContext";
+import { JokeContext } from "../utils/store/state";
 
 // image imports
 import dad from "../assets/dad-quote.png";
@@ -17,7 +17,7 @@ import profile from "../assets/profile.png";
 import "./pages.scss";
 
 const HomePage = props => {
-	const { searchJokesHandler, jokes } = useContext(DataContext);
+	const { searchJokesHandler, jokes } = useContext(JokeContext);
 
 	const token = localStorage.getItem("token");
 	return (

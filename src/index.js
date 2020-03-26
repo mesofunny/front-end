@@ -1,21 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import "semantic-ui-css/semantic.min.css";
-import App from "./App";
-import { reducer } from "./utils/store/actions";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import logger from "redux-logger";
 
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+import App from "./App";
+
+import "semantic-ui-css/semantic.min.css";
 
 ReactDOM.render(
-	<Provider store={store}>
-		<Router>
-			<App />
-		</Router>
-	</Provider>,
+	<Router>
+		<App />
+	</Router>,
 	document.getElementById("root")
 );

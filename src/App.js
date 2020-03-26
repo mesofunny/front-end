@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
-import axios from "axios";
 
+// import main page components
 import LoginRegister from "./components/LoginRegister";
 import HomePage from "./pages/HomePage";
 import MenuBar from "./pages/MenuBar.js";
@@ -11,46 +11,15 @@ import Jokes from "./components/Jokes";
 import Footer from "./pages/Footer";
 import NeedUpdate from "./components/NeedUpdate";
 
-import { DataContext } from "./utils/DataContext";
+// initial global state to app
+import { JokeState } from "./utils/store/state";
 
 import "./pages/pages.scss";
 
 function App() {
-	const [data, setData] = useState([]);
-	const [filteredData, setFilteredData] = useState([]);
-
-	useEffect(() => {
-		const getFeed = () => {
-			axios
-				.get("https://DadJokes.herokuapp.com/api/v1/jokes")
-
-				.then(response => {
-					console.log(response.data.jokes);
-					setData(response.data.jokes);
-				})
-
-				.catch(error => {
-					console.log("Where are my jokes?", error);
-				});
-		};
-
-		getFeed();
-	}, []);
-
-	const searchJokesHandler = e => {
-		const jokes = data.filter(joke => {
-			if (joke.title.includes(e.target.value)) {
-				return joke;
-			}
-		});
-		setFilteredData(jokes);
-	};
-
 	return (
 		<div className="App">
-			<DataContext.Provider
-				value={{ searchJokesHandler, data, filteredData }}
-			>
+			<JokeState>
 				<MenuBar />
 				<Route exact path="/" component={HomePage} />
 				<Route path="/user" component={LoginRegister} />
@@ -60,7 +29,7 @@ function App() {
 				<Route path="/favorites" component={NeedUpdate} />
 				<Route path="/friends" component={NeedUpdate} />
 				<Footer />
-			</DataContext.Provider>
+			</JokeState>
 		</div>
 	);
 }

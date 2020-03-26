@@ -22,16 +22,7 @@ import {
 	GET_JOKE_SUCESS,
 } from "./types";
 
-const initialState = {
-	error: "",
-	isFetching: false,
-	jokes: ["joke of the day"],
-	isLoading: false,
-	isLoggedIn: false,
-	user: "",
-};
-
-export const reducer = (state = initialState, action) => {
+export const reducer = (state, action) => {
 	switch (action.type) {
 		case FETCH_DATA_START:
 			return {

@@ -7,10 +7,10 @@ export const axiosWithAuth = () => {
 		headers: {
 			Authorization: token,
 		},
-		baseURL: "https://DadJokes.herokuapp.com",
+		baseURL: "https://mesofunny.herokuapp.com/api",
 	});
 };
 
 export const call = () => {
-	return axios.create({ baseURL: "https://DadJokes.herokuapp.com" });
+	return axios.create({ baseURL: "https://mesofunny.herokuapp.com/api" });
 };

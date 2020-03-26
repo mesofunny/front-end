@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import PublicJokesContainer from "./PublicJokesContainer";
 import HomePage from "../pages/HomePage";
-import { DataContext } from "../utils/DataContext";
+import { JokeContext } from "../utils/store/state";
 
 // use public jokes api to get information for PublicJokeCard
 function PublicJokes() {
-	const { data, filteredData } = useContext(DataContext);
+	const { data, filteredData } = useContext(JokeContext);
 
 	return (
 		<div className="public-joke-container">
