@@ -1,9 +1,28 @@
 import { axiosWithAuth } from "../axiosWithAuth";
 import { call } from "../axiosWithAuth";
-
-export const FETCH_DATA_START = "FETCH_DATA_START";
-export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
-export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
+import {
+	FETCH_DATA_START,
+	FETCH_DATA_SUCCESS,
+	FETCH_DATA_FAILURE,
+	ADD_DATA_START,
+	ADD_DATA_SUCCESS,
+	ADD_DATA_FAILURE,
+	DELETE_DATA_START,
+	DELETE_DATA_SUCCESS,
+	DELETE_DATA_FAILURE,
+	EDIT_DATA_START,
+	EDIT_DATA_SUCCESS,
+	EDIT_DATA_FAILURE,
+	LOGIN_START,
+	LOGIN_SUCCESS,
+	LOGIN_FAILURE,
+	REGISTRATION_START,
+	REGISTRATION_SUCCESS,
+	REGISTRATION_FAILURE,
+	GET_JOKE,
+	GET_JOKE_ERROR,
+	GET_JOKE_SUCESS,
+} from "./types";
 
 export const fetchData = () => dispatch => {
 	dispatch({ type: FETCH_DATA_START });
@@ -22,10 +41,6 @@ export const fetchData = () => dispatch => {
 		});
 };
 
-export const ADD_DATA_START = "ADD_DATA_START";
-export const ADD_DATA_SUCCESS = "ADD_DATA_SUCCESS";
-export const ADD_DATA_FAILURE = "ADD_DATA_FAILURE";
-
 export const addData = newJoke => dispatch => {
 	dispatch({ type: ADD_DATA_START });
 	axiosWithAuth()
@@ -39,10 +54,6 @@ export const addData = newJoke => dispatch => {
 			dispatch({ type: LOGIN_FAILURE, payload: err });
 		});
 };
-
-export const DELETE_DATA_START = "DELETE_DATA_START";
-export const DELETE_DATA_SUCCESS = "DELETE_DATA_SUCCESS";
-export const DELETE_DATA_FAILURE = "DELETE_DATA_FAILURE";
 
 export const deleteData = id => dispatch => {
 	dispatch({ type: DELETE_DATA_START });
@@ -61,10 +72,6 @@ export const deleteData = id => dispatch => {
 		});
 };
 
-export const EDIT_DATA_START = "EDIT_DATA_START";
-export const EDIT_DATA_SUCCESS = "EDIT_DATA_SUCCESS";
-export const EDIT_DATA_FAILURE = "EDIT_DATA_FAILURE";
-
 export const editData = (id, editJoke) => dispatch => {
 	dispatch({ type: EDIT_DATA_START });
 	axiosWithAuth()
@@ -78,10 +85,6 @@ export const editData = (id, editJoke) => dispatch => {
 			dispatch({ type: LOGIN_FAILURE, payload: err });
 		});
 };
-
-export const LOGIN_START = "LOGIN_START";
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const LOGIN_FAILURE = "LOGIN_FAILURE";
 
 export const userLogin = (email, password) => dispatch => {
 	console.log(email, password);
@@ -103,10 +106,6 @@ export const userLogin = (email, password) => dispatch => {
 		});
 };
 
-export const REGISTRATION_START = "REGISTRATION_START";
-export const REGISTRATION_SUCCESS = "REGISTRATION_SUCCESS";
-export const REGISTRATION_FAILURE = "REGISTRATION_FAILURE";
-
 export const register = newUser => dispatch => {
 	dispatch({ type: REGISTRATION_START });
 	axiosWithAuth()
@@ -124,9 +123,6 @@ export const register = newUser => dispatch => {
 };
 
 // get joke
-export const GET_JOKE = "GET_JOKE";
-export const GET_JOKE_SUCESS = "GET_JOKE_SUCESS";
-export const GET_JOKE_ERROR = "GET_JOKE_ERROR";
 
 export const getJoke = () => dispatch => {
 	dispatch({ type: GET_JOKE });

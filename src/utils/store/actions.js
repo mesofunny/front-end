@@ -20,12 +20,12 @@ import {
 	GET_JOKE,
 	GET_JOKE_ERROR,
 	GET_JOKE_SUCESS,
-} from "./reducers";
+} from "./types";
 
 const initialState = {
 	error: "",
 	isFetching: false,
-	jokes: [],
+	jokes: ["joke of the day"],
 	isLoading: false,
 	isLoggedIn: false,
 	user: "",

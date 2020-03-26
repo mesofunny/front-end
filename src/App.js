@@ -8,12 +8,12 @@ import MenuBar from "./pages/MenuBar.js";
 import PublicJokes from "./components/PublicJokes";
 import Profile from "./components/Profile";
 import Jokes from "./components/Jokes";
-import Footer from "./components/Footer";
+import Footer from "./pages/Footer";
 import NeedUpdate from "./components/NeedUpdate";
 
 import { DataContext } from "./utils/DataContext";
 
-import "./App.css";
+import "./pages/pages.scss";
 
 function App() {
 	const [data, setData] = useState([]);
@@ -45,6 +45,7 @@ function App() {
 		});
 		setFilteredData(jokes);
 	};
+
 	return (
 		<div className="App">
 			<DataContext.Provider
@@ -58,7 +59,7 @@ function App() {
 				<Route path="/jokes" component={Jokes} />
 				<Route path="/favorites" component={NeedUpdate} />
 				<Route path="/friends" component={NeedUpdate} />
-				<Route path="/" component={Footer} />
+				<Footer />
 			</DataContext.Provider>
 		</div>
 	);

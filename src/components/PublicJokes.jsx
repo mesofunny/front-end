@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Footer from "./Footer";
 import PublicJokesContainer from "./PublicJokesContainer";
 import HomePage from "../pages/HomePage";
 import { DataContext } from "../utils/DataContext";
