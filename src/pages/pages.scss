@@ -16,6 +16,7 @@
 .links {
 	@include flex(space-around, row);
 	text-align: center;
+	margin: 3% 0;
 	a {
 		width: 100%;
 		padding: 4% 1%;
@@ -37,7 +38,7 @@
 			width: 100%;
 			object-fit: fill;
 		}
-		.daily {
+		.joke {
 			width: 30%;
 			position: absolute;
 			text-align: end;
@@ -49,6 +50,7 @@
 	}
 	.content {
 		.bar {
+			margin-top: 3%;
 			text-align: center;
 			input[type="text"] {
 				border-radius: 4%;

@@ -29,3 +29,8 @@ export const removeState = () => {
 		console.log(`Error occurs while clearing state: ${error}`);
 	}
 };
+
+export const logout = props => {
+	localStorage.removeItem("token");
+	props.history.push("/");
+};

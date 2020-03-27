@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { logout } from "../utils/localStorage";
+
 import menubaremoji from "../assets/menubaremoji.PNG";
 // adding scss
 import "./pages.scss";
@@ -14,12 +16,9 @@ const Header = () => {
 	);
 };
 
-const MenuBar = props => {
+const MenuBar = () => {
 	const token = localStorage.getItem("token");
-	const logout = () => {
-		localStorage.removeItem("token");
-		props.history.push("/");
-	};
+
 	if (token) {
 		return (
 			<div className="menu">

@@ -2,16 +2,12 @@ import React, { createContext, useReducer, useEffect } from "react";
 import {
 	FETCH_DATA_START,
 	FETCH_DATA_SUCCESS,
-	FETCH_DATA_FAILURE,
 	ADD_DATA_START,
 	ADD_DATA_SUCCESS,
-	ADD_DATA_FAILURE,
 	DELETE_DATA_START,
 	DELETE_DATA_SUCCESS,
-	DELETE_DATA_FAILURE,
 	EDIT_DATA_START,
 	EDIT_DATA_SUCCESS,
-	EDIT_DATA_FAILURE,
 	LOGIN_START,
 	LOGIN_SUCCESS,
 	LOGIN_FAILURE,
@@ -47,7 +43,7 @@ export const JokeState = props => {
 		saveState("joke", state);
 	}, [state]);
 
-	const fetchData = () => dispatch => {
+	const fetchData = () => {
 		dispatch({ type: FETCH_DATA_START });
 		axiosWithAuth()
 			.get(`/v1/users/jokes`)
@@ -64,7 +60,7 @@ export const JokeState = props => {
 			});
 	};
 
-	const addData = newJoke => dispatch => {
+	const addData = newJoke => {
 		dispatch({ type: ADD_DATA_START });
 		axiosWithAuth()
 			.post(`/v1/users/jokes`, newJoke)
@@ -81,7 +77,7 @@ export const JokeState = props => {
 			});
 	};
 
-	const deleteData = id => dispatch => {
+	const deleteData = id => {
 		dispatch({ type: DELETE_DATA_START });
 		axiosWithAuth()
 			.delete(`/v1/users/jokes/${id}`)
@@ -98,7 +94,7 @@ export const JokeState = props => {
 			});
 	};
 
-	const editData = (id, editJoke) => dispatch => {
+	const editData = (id, editJoke) => {
 		dispatch({ type: EDIT_DATA_START });
 		axiosWithAuth()
 			.put(`/v1/users/jokes/${id}`, editJoke)
@@ -115,7 +111,7 @@ export const JokeState = props => {
 			});
 	};
 
-	const userLogin = (email, password) => dispatch => {
+	const userLogin = (email, password) => {
 		console.log(email, password);
 		dispatch({ type: LOGIN_START });
 		return axiosWithAuth()
@@ -135,7 +131,7 @@ export const JokeState = props => {
 			});
 	};
 
-	const register = newUser => dispatch => {
+	const register = newUser => {
 		dispatch({ type: REGISTRATION_START });
 		axiosWithAuth()
 			.post(`/v1/users/register`, newUser)
@@ -153,19 +149,18 @@ export const JokeState = props => {
 
 	// get joke
 
-	const getJoke = () => dispatch => {
+	const getJoke = () => {
 		dispatch({ type: GET_JOKE });
 		call()
 			.get(`/v1/jokes`)
 			.then(res => {
-				console.log(res);
 				dispatch({ type: GET_JOKE_SUCESS, payload: res.data });
 			})
 			.catch(err => {
-				console.log(err.response);
 				dispatch({ type: GET_JOKE_ERROR, payload: err.response });
 			});
 	};
+
 	return (
 		<JokeContext.Provider
 			value={{
