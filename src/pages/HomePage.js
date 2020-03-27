@@ -4,7 +4,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { JokeContext, JokeState } from "../utils/store/state";
+import { JokeContext } from "../utils/store/state";
 
 // image imports
 import dad from "../assets/dad-quote.png";

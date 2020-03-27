@@ -73,3 +73,26 @@
 .footer {
 	text-align: center;
 }
+
+.public-feed {
+	text-align: center;
+	.public-card-blue {
+		width: 500px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		color: white;
+		background: rgb(81, 81, 214);
+		margin: 2% auto;
+		text-align: left;
+		padding: 1% 2%;
+	}
+	.public-card-white {
+		width: 500px;
+		border-radius: 10px;
+		border: 1px solid #ccc;
+		background: white;
+		margin: 2% auto;
+		text-align: left;
+		padding: 1% 2%;
+	}
+}

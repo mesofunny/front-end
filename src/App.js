@@ -2,10 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { Route } from "react-router-dom";
 
 // import main page components
-import LoginRegister from "./components/LoginRegister";
+import LoginRegister from "./pages/LoginRegister";
 import HomePage from "./pages/HomePage";
 import MenuBar from "./pages/MenuBar.js";
-import PublicJokes from "./components/PublicJokes";
+import PublicJokes from "./pages/PublicJokes";
 import Profile from "./components/Profile";
 import Jokes from "./components/Jokes";
 import Footer from "./pages/Footer";
