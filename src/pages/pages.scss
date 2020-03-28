@@ -1,0 +1,127 @@
+@mixin flex($content, $direction) {
+	display: flex;
+	justify-content: $content;
+	flex-direction: $direction;
+}
+@mixin center($border) {
+	border: $border;
+	width: 500px;
+	margin: auto;
+}
+.App {
+	background: whitesmoke;
+}
+
+.heading {
+	@include flex(space-around, row);
+	img {
+		margin: 0;
+	}
+}
+.links {
+	@include flex(space-around, row);
+	text-align: center;
+	margin: 3% 0;
+	a {
+		width: 100%;
+		padding: 4% 1%;
+		color: black;
+	}
+	a:hover {
+		background: #4183c4;
+	}
+}
+.home {
+	@include flex(center, column);
+	width: 70%;
+	margin: auto;
+	.daily-joke {
+		@include flex(center, column);
+		text-align: center;
+		margin: auto;
+		img {
+			width: 100%;
+			object-fit: fill;
+		}
+		.joke {
+			width: 30%;
+			position: absolute;
+			text-align: end;
+			font-size: 1.5rem;
+			line-height: 1.5;
+			margin-left: 32.2%;
+			padding-top: 3%;
+		}
+	}
+	.content {
+		.bar {
+			margin-top: 3%;
+			text-align: center;
+			input[type="text"] {
+				border-radius: 4%;
+				padding: 2% 3%;
+				font-size: 1.25rem;
+			}
+			input:focus {
+				border: 2px solid #555;
+			}
+			padding-bottom: 5%;
+		}
+		.options {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.footer {
+	text-align: center;
+}
+
+.public-feed {
+	text-align: center;
+	.public-card-blue {
+		@include center(1px solid white);
+		border-radius: 10px;
+		color: white;
+		background: rgb(81, 81, 214);
+		margin: 2% auto;
+		text-align: left;
+		padding: 1% 2%;
+	}
+	.public-card-white {
+		width: 500px;
+		border-radius: 10px;
+		border: 1px solid #ccc;
+		background: white;
+		margin: 2% auto;
+		text-align: left;
+		padding: 1% 2%;
+	}
+}
+.profile {
+	@include center(1px solid #ccc);
+
+	.profile-form {
+		background: green;
+		input[type="text"] {
+			border-radius: 4%;
+			padding: 2% 3%;
+			font-size: 1.25rem;
+		}
+	}
+}
+.joke-page {
+	.title {
+		@include flex(space-around, row);
+		margin-bottom: 3%;
+		img {
+			width: 70px;
+			height: 50px;
+			margin-top: auto;
+		}
+	}
+	// .add-joke {
+	// }
+}

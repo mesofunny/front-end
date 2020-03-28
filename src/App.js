@@ -1,71 +1,39 @@
-import React, {useState, useEffect} from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import LoginRegister from './components/LoginRegister'
-import HomePage from './components/HomePage'
-import MenuBar from './components/MenuBar.js'
-import { testingBackground } from './components/StyledWidgets'
-import PublicJokes from "./components/PublicJokes";
-import Profile from "./components/Profile"; 
-import Jokes from "./components/Jokes";
-import { DataContext } from './contexts/DataContext'
-import axios from 'axios'
-import Footer from "./components/Footer";
+import React, { useContext, useEffect } from "react";
+import { Route } from "react-router-dom";
+
+// import main page components
+import LoginRegister from "./pages/LoginRegister";
+import HomePage from "./pages/HomePage";
+import MenuBar from "./pages/MenuBar.js";
+import PublicJokes from "./pages/PublicJokes";
+import Profile from "./pages/Profile";
+import Jokes from "./pages/Jokes";
+import Footer from "./pages/Footer";
 import NeedUpdate from "./components/NeedUpdate";
 
+// initial global state to app
+import { JokeContext } from "./utils/store/state";
 
-function App(props) {
-  const [data, setData] = useState([])
-  const [filteredData, setFilteredData] = useState([])
+import "./pages/pages.scss";
 
-  useEffect(() => {
-    const getFeed= () => {
-            axios 
-                .get("https://mesofunny.herokuapp.com/api/v1/jokes")
-
-                .then(response => {
-                    console.log(response.data.jokes)
-                    setData(response.data.jokes)
-                })
-
-                .catch(error => {
-                console.log("Where are my jokes?", error)
-                });
-        }
-
-        getFeed();
-  }, [])
-
-const searchJokesHandler = e => {
-  const jokes = data.filter(joke => {
-    if (joke.title.includes(e.target.value)) {
-      return joke
-    }
-  })
-  setFilteredData(jokes)
-}
-
-  console.log('data', filteredData)
-
-  return (
-      <div style={testingBackground}>
-        <>
-        <DataContext.Provider value={{searchJokesHandler, data, filteredData}}>
-        <Router>
-            <Route path="/" component={MenuBar} />
-            <Route exact path ='/' component={HomePage} />
-            <Route path="/user" component={LoginRegister} />
-            <Route path='/profile' component={Profile} />
-            <Route path='/public-feed' component={PublicJokes} />
-            <Route path="/jokes" component={Jokes} />
-            <Route path="/favorites" component={NeedUpdate} />
-            <Route path="/friends" component={NeedUpdate} />
-            <Route path="/" component={Footer} />
-          </Router>
-          </DataContext.Provider>
-        </>
-      </div>
-  );
+function App() {
+	const { getJoke } = useContext(JokeContext);
+	useEffect(() => {
+		getJoke();
+	}, []);
+	return (
+		<div className="App">
+			<MenuBar />
+			<Route exact path="/" component={HomePage} />
+			<Route path="/user" component={LoginRegister} />
+			<Route path="/profile" component={Profile} />
+			<Route path="/public-feed" component={PublicJokes} />
+			<Route path="/jokes" component={Jokes} />
+			<Route path="/favorites" component={NeedUpdate} />
+			<Route path="/friends" component={NeedUpdate} />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
