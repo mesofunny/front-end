@@ -62,7 +62,7 @@ const LoginRegister = props => {
 					<img src={menubaremoji} alt="menuBarEmoji" />
 
 					<form>
-						<label for="email">Email: </label>
+						<label>Email: </label>
 						<input
 							type="email"
 							name="email"
@@ -70,7 +70,7 @@ const LoginRegister = props => {
 							placeholder="Email"
 							onChange={handleChanges}
 						/>
-						<label for="password">Password: </label>
+						<label>Password: </label>
 						<input
 							type="password"
 							name="password"

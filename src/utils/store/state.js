@@ -33,7 +33,12 @@ export const JokeState = props => {
 		jokes: [],
 		isLoading: false,
 		isLoggedIn: false,
-		user: [],
+		users: {
+			firstname: "carlos",
+			lastname: "hernandez",
+			email: "example@test.com",
+			dadjokes: [],
+		},
 	};
 	const localState = loadState("joke");
 
@@ -160,6 +165,9 @@ export const JokeState = props => {
 				dispatch({ type: GET_JOKE_ERROR, payload: err.response });
 			});
 	};
+	const addJokeToProfile = e => {
+		console.log(e);
+	};
 
 	return (
 		<JokeContext.Provider
@@ -177,6 +185,7 @@ export const JokeState = props => {
 				userLogin,
 				register,
 				getJoke,
+				addJokeToProfile,
 			}}
 		>
 			{props.children}

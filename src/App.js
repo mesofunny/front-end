@@ -6,8 +6,8 @@ import LoginRegister from "./pages/LoginRegister";
 import HomePage from "./pages/HomePage";
 import MenuBar from "./pages/MenuBar.js";
 import PublicJokes from "./pages/PublicJokes";
-import Profile from "./components/Profile";
-import Jokes from "./components/Jokes";
+import Profile from "./pages/Profile";
+import Jokes from "./pages/Jokes";
 import Footer from "./pages/Footer";
 import NeedUpdate from "./components/NeedUpdate";
 

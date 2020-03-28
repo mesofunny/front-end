@@ -3,6 +3,11 @@
 	justify-content: $content;
 	flex-direction: $direction;
 }
+@mixin center($border) {
+	border: $border;
+	width: 500px;
+	margin: auto;
+}
 .App {
 	background: whitesmoke;
 }
@@ -77,8 +82,7 @@
 .public-feed {
 	text-align: center;
 	.public-card-blue {
-		width: 500px;
-		border: 1px solid #ccc;
+		@include center(1px solid white);
 		border-radius: 10px;
 		color: white;
 		background: rgb(81, 81, 214);
@@ -95,4 +99,29 @@
 		text-align: left;
 		padding: 1% 2%;
 	}
+}
+.profile {
+	@include center(1px solid #ccc);
+
+	.profile-form {
+		background: green;
+		input[type="text"] {
+			border-radius: 4%;
+			padding: 2% 3%;
+			font-size: 1.25rem;
+		}
+	}
+}
+.joke-page {
+	.title {
+		@include flex(space-around, row);
+		margin-bottom: 3%;
+		img {
+			width: 70px;
+			height: 50px;
+			margin-top: auto;
+		}
+	}
+	// .add-joke {
+	// }
 }

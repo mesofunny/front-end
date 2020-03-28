@@ -5,7 +5,6 @@ import "../pages/pages.scss";
 
 const PublicJokes = () => {
 	const { jokes } = useContext(JokeContext);
-	console.log("jokes", jokes.jokes);
 	return (
 		<div className="public-feed">
 			<h2>Public Feed</h2>
